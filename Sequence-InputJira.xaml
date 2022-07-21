@@ -1,0 +1,780 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_InputJira" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="869.6,1325.6" sap2010:WorkflowViewState.IdRef="Sequence_InputJira_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_InputJira" sap:VirtualizedContainerService.HintSize="880,1260.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: CERIA Incident - Ceria Handling Complaint - Jira Service Management" sap:VirtualizedContainerService.HintSize="838.4,1230.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="804.8,1013.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="763.2,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <Flowchart sap:VirtualizedContainerService.HintSize="763.2,856.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+              <Flowchart.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="isFormCeriaExist" />
+                <Variable x:TypeArguments="x:Boolean" Name="isLoginPageJiraExist" />
+              </Flowchart.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">330,2.5</av:Point>
+                  <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">360,77.7 360,127.7</av:PointCollection>
+                  <x:Double x:Key="Width">729.59999999999991</x:Double>
+                  <x:Double x:Key="Height">819.99999999999977</x:Double>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart.StartNode>
+                <x:Reference>__ReferenceID0</x:Reference>
+              </Flowchart.StartNode>
+              <FlowStep x:Name="__ReferenceID0">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">260,127.7</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">360,180.5 360,206.4</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[isFormCeriaExist]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9ceeb51-25f9-4f2d-b08a-81987f02a17a" InformativeScreenshot="04704716dd362d7a0758c88e254a1316" Selector="&lt;webctrl tag='H1' aaname='Ceria Handling Complaint' innertext='Ceria Handling Complaint' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:UiElementExists>
+                <FlowStep.Next>
+                  <FlowDecision x:Name="__ReferenceID2" Condition="[isFormCeriaExist]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">320.4,206.4</av:Point>
+                        <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+                        <av:PointCollection x:Key="FalseConnector">399.6,250 420,250 420,353.6</av:PointCollection>
+                        <av:PointCollection x:Key="TrueConnector">320.4,250 160,250 160,340</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">60,340</av:Point>
+                            <av:Size x:Key="ShapeSize">200,100</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap2010:Annotation.AnnotationText="Proses Data di Jira" sap:VirtualizedContainerService.HintSize="625.6,2076" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="584,1859.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                            <ueab:ExcelProcessScopeX.Body>
+                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,1772.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="508.8,1680" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Data.xlsx" WorkbookPath="Data.xlsx">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,1410.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="sd:DataTable" Name="dataExcel" />
+                                            <Variable x:TypeArguments="sd:DataTable" Name="upData" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,1732.8" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Send_Data&quot;)]" SaveAfterEachRow="False">
+                                            <ueab:ExcelForEachRowX.Body>
+                                              <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                                <ActivityAction.Argument1>
+                                                  <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                                </ActivityAction.Argument1>
+                                                <ActivityAction.Argument2>
+                                                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                                </ActivityAction.Argument2>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,1640.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;proses isi data&quot;]" />
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_7" Text="[CurrentRow.ByField(&quot;Judul Laporan&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Judul Laporan*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="569, 679, 755, 50" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='DIV' class='Content-ve26fj-1 hqyPWx' aaname='' /&gt;" Guid="1aec01b8-daa1-4c73-8ad3-1274e71deea8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG/SURBVHhe7dixasNAFETR/P9PhjTChTC4sI2lwJoXWCEThbTr4Qycann9ZT+amZmZmZlFTNybmZmZmYVM3JuZmZmZhewl7q+3e5tOc/v8mgAAgIFVt1e/77fFfT0cHQEAAOPaB/4W9/3Hfj5f2mNZ27J+AwAAA6per26vfq+O79vivpe/sAcAgPFVt/eG7/sV90eHAADAeMQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACEEPcAABBC3AMAQAhxDwAAIcQ9AACE+DfuH8t6eAgAAIyjuv3PuJ9O88/DfL4IfAAAGFj1enV79Xt1fN8W99fbfSt/AADgPVTH921xX6uH/oMPAACMq7p9H/a1l7g3MzMzM7N3XWtPDqh7ThEM8wwAAAAASUVORK5CYII=" InformativeScreenshot="2ab3df8e70395729a4a32bcf028880ba.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="569, 629, 755, 50" ElementType="Text" FriendlyName="'Judul Laporan*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' tag='LABEL' /&gt;" FuzzyAccuracy="0.85" FuzzySelectorArgument="&lt;webctrl type='' tag='LABEL' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' aaname='' check:innerText='Judul Laporan*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPTSURBVHhe7dzBal1FGMBxH8kH8AF8Atdd263QjeJONxYEQajgUl2I3SguSqFdFC0UEexOFzFFYgWlFrG1qzFfku927jj3XqOH0Hz9/WBIMnfOnDl39b+hzQsNAAAoQdwDAEAR4h4AAIoQ9wAAUIS4BwCAIsQ9AAAUIe4BAKAIcQ8AAEWIewAAKELcAwBAEeIeAACKEPcAAFCEuAcAgCLEPQAAFCHuAQCgCHEPAABFiHsAAChC3AMAQBHiHgAAihD3AABQhLgHAIAixD0AABQh7gEAoAhxDwAARYh7AAAoQtwDAEAR4h4AAIoQ9wAAUIS4BwCAIsQ9AAAUIe4BAKAIcQ8AAEVsjPu9ewfttTffa5ff/6Q9/uvJyezpxbWxR+wVe/5bH370ebt46Z327d3vT2bWLXW+c+nTK629e+nkBwAAOCbuz5Pb11t75cXjsH/rYmtvXDgOfQAAOCTuz5vffmnt1Zdbu/BSaz98dzIJAACniPtZTD94+Ed7/e0PjkZ8HzLmI8xjXP3i5j/ifhbuX17/6mguvoal4j6uz7Pk6PfM+9y49c3Rc8zWhLxfvt4/c8jzf/zZtdU+MTe+HzH6M/fP8fWdu6s1/fu1EjEfUR+/rc/v47f5AABwaNG4n4XsLFbPKu5zTZ4hRx/meZ/ZyHvH19nr/TPl+fsR123aP59z0xljbHs2AAAYLRr3uaaP3gzjfu6s4n6U552dpd+nn/v98Jr4Gj/HfMo1OZfn7z84zOS6vC6fI+byWfM927UXAAD0Fo37jNI+gmNtXDML6rOK+zxn7Bdj11ly77hm/6f7a8+Y+jUxP0b7KF/PkevGfUKed7wnAABscxT3s1Ae52YROs6dNu4z5MM4lz//n7gf12Q0z86yVNz3zxTG/XNdzIfZc+Q5x3sCAMA2a3HfR++mCJ2tyQidrcng7+cyeHPvjNmYyzgeo3iU99oW97lH7jk7X67p98nnirnT/rOcvFfI+/WRPl43ew5xDwDAf7H6ZzkZnePIuO4DfBwZoRGnGcLj6IM6Q3g2Mo7zPLvifrw+R+yz6T6zuJ+NvHd+QBnH7Jny/GHbeybuAQBY2iruZ2E+hvUY1PnnI/sIHfeZ/SnM0Ed1vB7r4vsl4348S8yNEZ73iT9D2a/d9exjeI/7pv6DQVzz472f194zcQ8AwFI2/ofa58WuDxEAAHBeiHtxDwBAEeJe3AMAUMRzH/cAAFCFuAcAgCLEPQAAFCHuAQCgCHEPAABFiHsAAChC3AMAQBFrcf/no8ft4P6vbW//wDAMwzAMwzCMZ3hEt0e/P9Xa3/HfXSVCPR0dAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_12" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_8" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_9" Text="[CurrentRow.ByField(&quot;Detail Laporan&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Detail Laporan'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="571, 807, 750, 105" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='description' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='ak-editor-content-area less-margin sc-jWxkHr ZwkpQ sc-lnrBVv ebrxTq' parentid='description' tag='DIV' aaname='' /&gt;" Guid="360e7632-8476-4db9-aa3a-8d8104cfbe0c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvIAAABtCAYAAADDNIXzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKDSURBVHhe7dahDsJAFEVB/v8nm5oaEOhCUlIPNWs4mxFjVt4n9tyWdTtO++sNSffH8+s7/++8nfv9ZptxNgRmdfa7kCfPR90l5K/ZZpwNgVkJeabgo+4S8tdsM86GwKyEPAAABAl5AAAIEvIAABAk5AEAIEjIAwBAkJAHAIAgIQ8AAEFCHgAAgoQ8AAAECXkAAAgS8gAAECTkAQAgSMgDAECQkAcAgCAhDwAAQUIeAACChDwAAAQJeQAACBLyAAAQJOQBACBIyAMAQJCQBwCAICEPAABBQh4AAIKEPAAABAl5AAAIEvIAABAk5AEAIEjIAwBAkJAHAIAgIQ8AAEFCHgAAgoQ8AAAECXkAAAgS8gAAECTkAQAgSMgDAECQkAcAgCAhDwAAQUIeAACChDwAAAQJeQAACBLyAAAQJOQBACBIyAMAQJCQBwCAICEPAABBQh4AAIKEPAAABAl5AAAIEvIAABAk5AEAIEjIAwBAkJAHAIAgIQ8AAEFCHgAAgoQ8AAAECXkAAAgS8gAAECTkAQAgSMgDAECQkAcAgCAhDwAAQUIeAACChDwAAAQJeQAACBLyAAAQJOQBACBIyAMAQJCQBwCAICEPAABBQh4AAIKEPAAABAl5AAAIEvIAABAk5AEAIEjIAwBAkJAHAIAgIQ8AAEFCHgAAgoQ8AAAECXkAAAgS8gAAECTkAQAgSMgDAECQkAcAgCAhDwAAQUIeAACChDwAAAQJeQAACBLyAAAQJOQBACBIyAMAQJCQBwCAICEPAABBQh4AAIKEPAAABAl5AAAIEvIAABAk5AEAIEjIAwBAkJAHAIAgIQ8AAEFCHgAAgoQ8AAAECXkAAAha1u34ANkv/x9B5bUqAAAAAElFTkSuQmCC" InformativeScreenshot="961da54614609be60fae1ef79e75c791.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="569, 740, 104, 17" ElementType="Text" FriendlyName="'Detail Laporan'" FullSelectorArgument="&lt;webctrl aaname='Detail Laporan' parentid='root' tag='SPAN' /&gt;" FuzzyAccuracy="0.84" FuzzySelectorArgument="&lt;webctrl aaname='Detail Laporan' parentid='root' tag='SPAN' type='' class='' check:innerText='Detail Laporan' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAVCAYAAACjSwvEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIsSURBVGhD7ZUxLwVREIX9X61EI1FqqIRCQicqGqKSUIhOFDoNeQUlokC1HPFtTsa9++6+vCc27kkmz52ZO3Nmzu6aayoGhSrYwFAFGxiqYANDFWxgqIINDK1gxycXzfziatKurm++s2aHx+eXZmll68v0t7C9e9jZH876/S8oEkzWdymvb+/Nxs5+czu6//Z0owpWhh+CxeHx+yLHgeUvLK8XC5ZCFewnxgompBZHPkYMsTym+4Jy3C+L92bxhpX2PT2/bOPOA+jh00OYy4HvwdFZm6c++tqsbe6192Q6yy/4HNSIOaBIsBjjHE3kWID7RSIOizG0L44lTEOw0r4x7jlCSnSZf0V82R6LfmzcPmVxtl6CqTEDOlGWwhORyomIOZx9SdMQLCLX1+tEn78h4gTgh49z6s1w+D79nJqdHNBbMMTRORoN41IcvgzZbwnWp6/gM+dy2AV++Ob4UBNDDO8FeKPdJ/T6H6bYpIJxL/cWcqaGQN9pfBL79BWoLQ65HGrjz/GNfq/tZ59jYsG4CCnIM3AKfEI8B9LUZ9iuxeUWAHKcHaV9Pcc/gfL52RdIbXwpvvRLzcW91BzFguXMi+VyKe4D4s/dmYZgKaNuad9UjnNhgdGoI6T4dtVnX3DUL5hYMCfkiPmxsMcl3tMncRdRcXL0OyvB4sPT1Vd9dE8x5wFUj3gqJ8eX5XPnbvTQ9tR95wPGCvZf4YJFgf4iqmBVsGGhClYxQzTNB7dOgBCjIG05AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_10" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="10" Version="V1">
+                                                    <uix:NMouseScroll.SearchedElement>
+                                                      <uix:SearchedElement>
+                                                        <uix:SearchedElement.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="569, 538, 98, 17" ElementType="Text" FriendlyName="'CERIA Labels'" FullSelectorArgument="&lt;webctrl aaname='CERIA Labels' parentid='root' tag='SPAN' /&gt;" FuzzyAccuracy="0.88" FuzzySelectorArgument="&lt;webctrl aaname='CERIA Labels' parentid='root' tag='SPAN' type='' class='' check:innerText='CERIA Labels' /&gt;" Guid="2c9fd75a-202b-4ad9-acad-5c9d1ca8740c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAVCAYAAAC0aZsNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJgSURBVGhD7VY9S0NBEPT/2go2gqWNVoKFYCn+AMFKsBE7sbCzEUX8KERF8aN6ZqLz3Ezm3jsThSPcwGK4ndud3bmoc01FkajGFIpqTKGoxhSKakyhqMYUijFjzi+vm4Xl9WZ+cbWNvf2j7+wXtrZ3R/IaJ6dnvby1jZ3m7f1jyAPI1V4Ac3rHgfpzuF1gT84yCabRMmIMlsLFacTif2EMAnmCXDXm4em5WVrZHOYwJIbtwkwY8/ryYwyLqJholi68T3SKx15YOBYPpIxhf+bxswszYcwArTFcgC4GgMh4nis6xeO3AKIhHiA39sEwGArcm7v79jPNdMhdBnnoyXAzHhwet99Y5QCYjTnNOy2ur9tja0zusgFyXbhvgdbkMI7rBkMOQE45ihxj+DBQKwbu4T7QNSPn4Rwa1KdanCmI2JcYGsOXCdJ/GJOKuGBnDM+oiQvtWnqOMQo3P3vHOnwYOHscaNE71McdpIyJNVOYypg+bsoY90LUmNSrRrj7xG+Gj3Mz1Jg4I2tD18XVba8+1eL6pXSO/Y2BIAXOul5yCsrDTwqK9QByeR65LpxOIMcYfdlxYdTqZpzWGMIZFPsArTEsoqS4oC7RDo7n6gFqTKqHLlWRY4w+wvjtZD/2j3V4D2fuV5liEi1EawxAkotYnKJTwSbkqXCex+XyDBo4UGr5kauID8wF7kCPyyHUGBfkpOpwV2pMTl9ixBjADaYL6BKNQD7ytGl8ocpFL0TMKTige4k5xgDsh8Bn1lQ9+u+yzsJ7jKhJjYln8Y7uFxgzpqIMVGMKRTWmUFRjikTTfALu2ZJJqfxH1wAAAABJRU5ErkJggg==" InformativeScreenshot="8277c291a858daf77110afbe7b8ce858.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                                        </uix:SearchedElement.Target>
+                                                        <uix:SearchedElement.Timeout>
+                                                          <InArgument x:TypeArguments="x:Double" />
+                                                        </uix:SearchedElement.Timeout>
+                                                      </uix:SearchedElement>
+                                                    </uix:NMouseScroll.SearchedElement>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NMouseScroll>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_11" Text="[CurrentRow.ByField(&quot;CERIA Labels&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CERIA Labels*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="571, 741, 710, 40" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class=' css-11tnip9' parentid='root' tag='DIV' aaname='' /&gt;" Guid="6e030f4f-a098-453f-9dc4-63067a6a9c29" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAsoAAAAsCAYAAAB8FJ72AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD2SURBVHhe7daxDYBAEMCw339e4ET1tEhkA1y4yQRZ19z7OAcAAHhZFQEA4O+MMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAH7MfNCcqJC9pWRUAAAAASUVORK5CYII=" InformativeScreenshot="b9ad093f51c9f5fd18c2c1e3c5118a8e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="569, 686, 755, 50" ElementType="Text" FriendlyName="'CERIA Labels*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' tag='LABEL' aaname='' check:innerText='CERIA Labels*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARSSURBVHhe7dxBa11FGIBhf5I/wx8grl3bpUI2FZfdNCAIBQvdCKULl4WuCm5Kd1Kwu7oQRdQuSi2tTQOB0S/Jd51M5txcb9KoH88DQ8I5c8/MuUnhvael77RLcO/+w3Zl53q7dfvu8REqe/T4yeHPO0fVn/vem/22e+NOu3rtZnv+4uXx0YtxWe9hXDeuH39GOZ94D+P3IX4vAODfcilxDwAAvH3iHgAAihD3AABQhLgHAIAixD0AABQh7gEAoAhxDwAARYh7AAAoQtwDAEAR4h4AAIoQ9wAAUIS4BwCAIsQ9AAAUIe4BAKAIcQ8AAEWIewAAKELcAwBAEeIeAACKEPcAAFCEuAcAgCLEPQAAFCHuAQCgCHEPAABFiHsAAChC3AMAQBHiHgAAihD3AABQhLgHAIAixD0AABQh7gEAoAhxDwAARZyK+x9++qV98tkX7crO9dW4d//h8dkjt27fPXF+HI8ePzlz3u6NO23vzf7hvJBzx7VCnhtfM5P732TuOrlm3ss2zr2XZ09b+/j91r7/7vgAAAAsOxH3EdYZ3+PoA/Ui4j5GnE85d4z75y9etqvXbh6ei1COYF6nRNy/ftXapx8ehX18/Wq3tY/eO4p9AABYsIr7DNExaPvgH6P9rPBdmpdrRbRHvIeluM/183x8XadE3Kevv2ztg3db+3zn+AAAACxbxX1G9BjXIUK3P75p+C7Ny6fxEb4RwCHn9utEEEcYx9xfnz5bfZ8fCGY2DeqcF2vmmN3jNw++Xf3NwTgnxL3lufH8bC+zdafvYwR9Pq2P7+MJfjzRBwCABau43zTYQ86djdnT+PGaGcSzubM4jnMhzo1zRpvEfX64iGv1I14Xrw/r7jHvJ+9jHLm/cS+zsI/RrwsAANs6jPt8Qh6h+Tbifmn0kT6L+zyWe8ooXxfum8T9aHb/uXZ/nfxwEcd+/2sv42tyf/keLMV9f00AALgo54r7s+Yuxf3sSfUY90tP12Ose9L9TwK6v+8cY9z395jXjn39+PNvZ+5v3MtsvU32CQAAmzj1b+4jakdxbN0T9SXjvPiaUdtfL+TcPN7PnY3ZPsMmcT8+Ye+jO/c6u8fzxn2aRX6/DgAAbGMV9xmiY2j2kb0ufGdm82bXC2PcL60xhvlok7gfP8j0f0uQ6+X6/XXydXFs9s9yRtvsBQAAtrWK+5ChORt9oGb4Lo0M1Zw3xm8e7wM9j8UeMoqXAr6fO+o/pMxGvCb2MzsXY4z72cg5S9fJ92qM+03WBQCAbZ2I+zCL4zGi14VvjDjfzxvDtX9SPs6NtWL050YZybMn4pvEfcj1YsT3ec1xP+N/hTneS74uR7+nMe77Y/1rxvcXAAC2cSruAQCA/ydxDwAARYh7AAAoQtwDAEAR4h4AAIoQ9wAAUIS4BwCAIsQ9AAAUIe4BAKAIcQ8AAEWciPuDg4P2em+/vfpjzzAMwzAMwzCM//CIbo9+/1trfwL1Zcp1bJVZFAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_12" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_13" Text="[CurrentRow.ByField(&quot;Impact&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Impact*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="571, 586, 710, 40" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class=' css-11tnip9' parentid='root' tag='DIV' aaname='' /&gt;" Guid="911b9ac0-9855-4ebc-8823-dfbc1bd1b399" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAsoAAAAsCAYAAAB8FJ72AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD2SURBVHhe7daxDYBAEMCw339e4ET1tEhkA1y4yQRZ19z7OAcAAHhZFQEA4O+MMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAH7MfNCcqJC9pWRUAAAAASUVORK5CYII=" InformativeScreenshot="4344a9ca418c4e5b57d8ca6e3cfe62a1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="569, 531, 755, 50" ElementType="Text" FriendlyName="'Impact*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='4' tag='LABEL' /&gt;" FuzzyAccuracy="0.86" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' tag='LABEL' aaname='' check:innerText='Impact*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMISURBVHhe7dq/alNxGMdhL8kL8AK8AufOdhW6KG66KAiioKCbOIiT4FToIuIigm46KB38B0XEtrEQ+Mnb5o2np7ENpcHmzfPAF3rOSc7J+EnomTayPdhpm1sDMzMzMzObo0XHp3HcD4fDiS82MzMzM7PTu+j4NI77EBf8gm9mZmZmdvoX3d4N+7Av7gEAgPkl7gEAoAhxDwAARYh7AAAoQtwDAEAR4h4AAIoQ9wAAUIS4BwCAIsQ9AAAUIe4BAKAIcQ8AAEWIewAAKELcAwBAEeIeAACKEPcAAFCEuAcAgCLEPQAAFCHuAQCgCHEPAABFiHsAAChC3AMAQBHiHgAAihD3AABQhLgHAIAixD0AABQh7gEAoAhxDwAARYh7AAAoQtwDAEAR47h/vvqyLa/caA8ePRudmXNP7rV2a2V0AAAA9c1t3A9+77Q7D5+2j+ufR2dGXq22duHsXthfW27tytJe6AMAQHFzGfc/fv5ql6/fb5eu3j4Y92HjW2sXz7e2dK61D29HJwEAoLZ/xv2bd+93j2/efbz7C3n8HYvXxa/mcT6Ou4Gd0R1be/F6/J44jmup+/5cHMf5FPeMe/ev5zO67933hSRiPqI+fq3Pv+PXfAAAKO7IuJ9mh4V3rhv48YxJr4nPEPphn4vnfP2+cXjcAwDAgjoy7vOX+e6v7RnzGeEZ7t24z1CfdK6v/+yM/zzOZ+dnyXvmMQAAMOW/5URch4zufrj34z6PU//eKc/n4no/5CcR9wAAcNCx4j6uhePGff8+3eviHgAAjmcmcR+vifuFjPU8FzEeUd79ApD3zWf3j7v3iGdP8wUAAAAWzczivr9pXpPPzi8A/et5j27sx/J9AACwyGb2bznxmgz0vJ7y3nnt0/qX8fvydf3A798jP2+s+xkBAGBRjeP+JHTjvhviAADA7Il7AAAoQtwDAEARJxr3AADA/yPuAQCgCHEPAABFiHsAAChC3AMAQBHiHgAAihD3AABQxL64Hw6HbXuw0za3BmZmZmZmdooX3R79/ldrfwBWPkWx6sImEwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_14" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_15" Text="[CurrentRow.ByField(&quot;Urgency&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Urgency*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="571, 686, 710, 40" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='6' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class=' css-11tnip9' parentid='root' tag='DIV' aaname='' /&gt;" Guid="94f4f9b5-3ee4-4e00-a089-12c740f9be5f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAsoAAAAsCAYAAAB8FJ72AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD2SURBVHhe7daxDYBAEMCw339e4ET1tEhkA1y4yQRZ19z7OAcAAHhZFQEA4O+MMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAH7MfNCcqJC9pWRUAAAAASUVORK5CYII=" InformativeScreenshot="c42b07d06a7fe80c90acc11b2b467d45.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="569, 631, 755, 50" ElementType="Text" FriendlyName="'Urgency*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='5' tag='LABEL' /&gt;" FuzzyAccuracy="0.91" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' tag='LABEL' aaname='' check:innerText='Urgency*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOESURBVHhe7dtPa1xVGAdgP5IfwA/QT+C6W+1W6MbiRuimLYIgKIhQEBeCG0tXBV1IWxAR7E4XggvBhUgxzRgYOPWdzDu+ub0JQ5I2mdfngR+5f86cOdn97snNa2Ntf3Ew9p4tRERERERkhxI9Pm3K/XK5nB0sIiIiIiKXN9Hj06bch7hhB19ERERE5PInenst9uFIuQcAAHaXcg8AAE0o9wAA0IRyDwAATSj3AADQhHIPAABNKPcAANCEcg8AAE0o9wAA0IRyDwAATSj3AADQhHIPAABNKPcAANCEcg8AAE0o9wAA0IRyDwAATSj3AADQhHIPAABNKPcAANCEcg8AAE0o9wAA0IRyDwAATSj3AADQhHIPAABNKPcAANCEcg8AAE0o9wAA0IRyDwAATSj3AADQxKbc33/wcFy7fmv1s1r8czBuf/TF6t6PT35eX21mf2+MG1fHePxgfQEAAHaPcv/B9THevnJY7u/eHuOtf49/+Wl9EwAAdodyH2LH/s3XDwt+7OIDAMAOOlW5//Tzr1fnX937drzz3odH7uU8OdfcvHVMpD40/Prb76s54zsfff9kMyauxb1U1zW9H/PFtVhn+uvp3+Pdm5+sEscbX348xtU3Dnfr4zh28f/8Y30TAAB2x5nKfSaL9bS0R96/89nqZ847NyaSc2e5nxsT64j1TIt9JtcxV+TnCj8AAHRypnKfZTvUcTlHluy8lud1lz3LfM5Vy31+XxbzLOvT8zBdf65xuuY8BwCAbs5U7uvYLO61cIc670m78vm5HFPnmc593FqrfACItU4/DwAAHb1Q7qMMVyeV+7oLflyBPm25r38VmM69Tbmvn/nmux9W46e/GwAAdLIp97nTHamlPa9H4Y7iHebK/Wlfy5naptznmvI8ZOGvBT7XmanrBQCAbjblvpbzucyV5mlZzoJds+0/1Ob825T7k9Za15QPAZH6IAAAAB1tyn2a7nZHspin48p9qOU9jvO8zlHHROqDwzblPswV/Ol66pj6HQAA0NEL5f605op0vVbL/atSv3/uQQQAADo5t3IfpjvymZPesX+Z8rUcr+QAAPB/cK7lPkxf67mIYl937C/qwQIAAF61cy/3AADAxVDuAQCgCeUeAACaUO4BAKAJ5R4AAJpQ7gEAoAnlHgAAmjhS7pfL5dhfHIy9ZwsREREREbnEid4e/f0/YzwHRPP3T5iwJZYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_16" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_17" Text="[CurrentRow.ByField(&quot;Klasifikasi Insiden&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Klasifikasi Insiden*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="571, 786, 710, 40" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class=' css-11tnip9' parentid='root' tag='DIV' aaname='' /&gt;" Guid="3e0297c0-eda0-4a92-b90b-ea07e593d811" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAsoAAAAsCAYAAAB8FJ72AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD2SURBVHhe7daxDYBAEMCw339e4ET1tEhkA1y4yQRZ19z7OAcAAHhZFQEA4O+MMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAH7MfNCcqJC9pWRUAAAAASUVORK5CYII=" InformativeScreenshot="dabee1b0c702f01df82dd6c6a5904983.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="569, 731, 755, 50" ElementType="Text" FriendlyName="'Klasifikasi Insiden*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='6' tag='LABEL' /&gt;" FuzzyAccuracy="0.85" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' tag='LABEL' aaname='' check:innerText='Klasifikasi Insiden*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATjSURBVHhe7dyxaqRVFMBxH8kH8AF8Autt1VbYRrG0cUEQBQUtBLWQrQQLWbARFUQEtxDWQrEQLETEbOJC4NOT5IwnJ3cyk80GZi6/HxyS+ebOvTNfmn/C6lPLmcOjR8vBwyNjjDHGGGPMHk10fFrF/fHx8XCxMcYYY4wxZncnOj6t4j7EE/6Cb4wxxhhjzO5PdHsN+3Au7gEAgP0l7gEAYBLiHgAAJiHuAQBgEuIeAAAmIe4BAGAS4h4AACYh7gEAYBLiHgAAJiHuAQBgEuIeAAAmIe4BAGAS4h4AACYh7gEAYBLiHgAAJiHuAQBgEuIeAAAmIe4BAGAS4h4AACYh7gEAYBLiHgAAJiHuAQBgEuIeAAAmIe4BAGAS4h4AACYh7gEAYBLiHgAAJiHuAQBgEuIeAAAmsYr7z+59tbx4+/WTr9X39x+cXK/PvffhpyeP47knZbRnXouJ7/uade/5Sdp0xp9//b28/Nq7y0uvvrn8/OtvZ1evb5vPlmfHxPc34vBgWV65tSzf3Du7AADArro07iNWI1rjeoR1GoX4dfU942s8zhH3F9143L9xe1leePY07j+4syzP//f9Tz+cPQkAwK5ZG/frwj7cRNx3Gff97GqbAL5pNxX327jxuA/xF/vnnj4N/PgrPgAAO2sY9xmN6+J6FPd5LacHZ/9LfI/hume+l762n9vjPs+oe/dzY/L14eifR8udtz8+93z9zP2Mrsd9De44J67nvtc9t/5cYr748rvVWXmv+771uZD38Otv759bV89e+eSdZbn1zOlf6+P7+Cv+H7+fPQkAwK65EPcf3f18FZA9DNO6yO6TwTgK7Ji6f92z77dN3Mfzsa6GfV6re8XkuaPAzok9Qz1jJPaJ/fLcfNz3i7nOudfZN58PeQ9HU3/5AABg/1yI+z4Z6FWP7C5jPkIzgjMfj/ZKfc/Ra/qafM9vvX93FfH53EgGcoZ4xnD9haDrkd31PWuE52vyl4zrnJv3o4Z6rslruSbve12T++Q9zDX5XuoaAAD20zDuI/Z+fPDLSXzG4x7MPbJTxmXdJ+KxBm9OjfbQ98y96rq+pr7nmHWx3M+v6zbtkc+vC9/cO1/XH4dRzF/13NH7yLNi4vu+Z528j3kP6z6jvQEA2D8X4j6DPGQIZjymdZGdcZhhXvcKGaPxXEwN2r7n48R9Xx97xxn9l4we0qHvlfv0z9b1PfNxvWejuE/bnjt6H/2svled3LffwzDaGwCA/TP8D2pTxmONw1ADMdfUcM29etxXuUee16PzKnEfXzOg6/P9jIz9UWSnXNODOffo+ufPx/n6cFncp03n5v2o++aavJZrtrnveY/Cps8IAMB+uDTuQ16vQVgDsUZ1n4zMukedGrs9OjNU43rqa/p7zkDe9twM8dGaPLef0eUefc8a4T3uH+fcy16TZ132sxj97NKmzwgAwH7YGPc1GDOaeyBmVMe1+Br/Xr/GbMhYr1MDs++Z6zN2Q18zes+5Jq712I1r/TWjIM7PGfr6LqP7KnFfr13l3B742/yvMGMuu89h02cEAGA/rOIeAADYb+IeAAAmIe4BAGAS4h4AACYh7gEAYBLiHgAAJiHuAQBgEuIeAAAmIe4BAGAS4h4AACZxLu6Pj4+Xw6NHy8HDI2OMMcYYY8wOT3R79Pv/luVflkUJVbJDmTAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_18" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_4" InteractionMode="HardwareEvents" MovementUnits="10" Version="V1">
+                                                    <uix:NMouseScroll.SearchedElement>
+                                                      <uix:SearchedElement>
+                                                        <uix:SearchedElement.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="569, 513, 205, 17" ElementType="Text" FriendlyName="'Time assigne'" FullSelectorArgument="&lt;webctrl aaname='Time assigne from BRICARE' parentid='root' tag='SPAN' /&gt;" FuzzyAccuracy="0.76" FuzzySelectorArgument="&lt;webctrl aaname='Time assigne from BRICARE' parentid='root' tag='SPAN' type='' class='' check:innerText='Time assigne from BRICARE' /&gt;" Guid="3b4ed948-7f2a-478f-a4ab-16a26a200a2c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANEAAAAVCAYAAADYQwtNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQgSURBVHhe7Zi9a1RREMX9f20FG8FGsFEb0UJQq2iVShAUay0sLFIIaRQLWxHFj2rlrPuLh8Pc+3bfS2I098CQfffd+ThnZrIhF1YDAwOLMJZoYGAhxhINDCzEWKKBgYUYSzQwsBBjiQYGFuJoid4cHK4uXr7RtEtXb6/29p+tPz998XLj9f9AnM4SN+qR3bz7ePX9x8/Nm7+DT5+/rK5cv3dUU5rr9u7Dx/W8VPdkmjUAz/t7TzYnvyG+4u1+PR2IoxpVa8L1TEsf1VLdw7x+YSzRBoh8FrjlEP4LSyRjuKaWSO90R0B3X6Kev/uCXLgccqG3RDLXeKcl+va1/nMOwVpbPXCyYIjOwvKA3kzkIvTqZ0D5ZZW+vhCtxfJzgS+AOw/2m3nJQ14AL19OaqyWscJOS5SFkOzR/vP1XX2mGCedpFwoWdWYBLlaPgiJuSiC14O5SJXIHlP5eaaJxBSXV68Pju5m7l34Jg+ZzqjPtabW5Jbx5/bJoXjyrWpP7VyX1jCjYT73fKVDdS5f+PhnR9YIvDeKL6AXz1M4liXaxvDxot2q5gDypiF8NXgyYvqguLnYya2Kee3Ww/VP8rbiymj2rnyrvDqrNNB5i7tzm9OnBDNR+ch8uNHFzwTXgjzwyl7yPAXqIlfLnzzJj1q31avq27EsEQR8qLiDT4rkAmfcKWSMKeFbTXVkDXAjpvzk72fOVzUI1IJ2c/hW9eLjPalqErJ2nom3TZ8SzITutAxfj1+Zc8i8U3UkuA8PNGnNbss8nz5Xd2QZVziWJeIZPwkoIYUc8B6ZKeGIhTEU5PV3HsuHDcMXODfuOw8huTAsrlNqN4cvcb1G4rhP5gJZl3zkqxgCfr0+JVq5BHx5R36dpWX85FXxbKHqq5vqAr0++D0BvfK8hRNZIvfL5vTItITLvMTMRSA/8XxIhEp0hPIcuy6R15EazOFbxU0NhEpvAX/O5/Qp0col8A69sn7XPf3hlZpWeVSja8Jd+VfW0899kzN6MRtTOPUl4tkJ9kBMGiRQRy9G1pYgBnXxzH38ee+DwFkOi5Aa7MpXqOJmfUJVk5C184zvNn1KVD4AX95V9XutFS/ytjiR388rTQRiVDPjd6kzz9FLvLbBqS+Ri5RWFd27TzOoKw0RqaEycia3yqf1jwXqEFKDXfkKVdysD7S4+QDN6VMCH8+R1tNF4Fx3qQVentfvpcGLepynI+PyTF7AucdBr5alRqe+REI1WK2BElxU/Xx7+H7t78SrYfKYHgNzQZOb4DFVf3Ihpg9LpcFcvh63qg8kt+zb3D458CFHmvtV9QN46L3u8Zx5K808HvVWOQRqgGNLP89DLPRqWdZaLtHAn8HzJnGWIg6cb4wlasC/hdJ63yID5w9jiTrgT4CxQAM9jCUaGFiE1eoXm96jLI/iotIAAAAASUVORK5CYII=" InformativeScreenshot="1ea764b78aec14cfd0f0329fa6f8249f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                                        </uix:SearchedElement.Target>
+                                                        <uix:SearchedElement.Timeout>
+                                                          <InArgument x:TypeArguments="x:Double" />
+                                                        </uix:SearchedElement.Timeout>
+                                                      </uix:SearchedElement>
+                                                    </uix:NMouseScroll.SearchedElement>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NMouseScroll>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,729.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_19" Text="[CurrentRow.ByField(&quot;Time assigne&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Time assigne'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_24" InteractionMode="DebuggerApi" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="744, 590, 179, 44" ElementType="InputBox" FriendlyName="'e.g. 10:59 AM'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='9' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class=' css-1b6odlt' parentid='root' tag='DIV' aaname='' /&gt;" Guid="3a8f9772-0cd0-4ac0-bb00-dbfa20512336" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAsCAYAAAAuJIllAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOGSURBVHhe7ZixaxRBFIft8/fk37G1EbQQtEgjphFtooWKhRCwiZXaaGMjgrUIdqnERi0ExfLkC/zCY/Jmd7O5nJd3v+Lj7mbezLyd983uJpd+//m7MOaic7i9tbDMpgSW2ZTBMpsyWGZTBstsymCZTRkssymDZTZlsMymDJbZlMEymzJYZlMGy2zKYJlNGSyzKYNlNmWwzKYMJWT+8fPX4u7D54vPXw7T/r2nLxaXr+4eceXGvW6cOHj57jg+QnuMYx7mUz/rxP4xyPv2/WfdnNTP3O8/fjrRH/n67fvi+s6DI/iexVTnwsssoXpCIBhCIAa/EXJMaGLimAzkipJJvNMITQ7XdvaOaA8KRJnH8tEBtMxJx7qjOxEFhExQyRLbp0g3JrPmaAXM1huC8eTRW0/rSPjevIq7eeeRZc461p0oTk+iniS0DxUdwYZkZx0OT/vo70meocPIHL38NR+vUHz2cmIO5nqy/8oyZx1TaO+OUzYyG/P67YfRR/8QmQwSIROA4ms95RPjzirz0FghAVm/Ny629w7glJhNYbbMKmi8C7GhQ5uZjaGovdeEqTCuJ3N2l4zxrcwap8OW5aYx7dztXEMQE+MyEaOovTXjtWRzbBKzZWaD2Wg2XG29DRdtAQXxq5aZ9do7aw9yRuoYz7xtG4958siuMaJ9imOznKLM/M5kpU91yPo3iVkyZ8WAdvMjQ6Izz/+6M7d9PaI0apPQgusgLrv+SCZdtndtG/lG4ds6WOYZMmtTYyEjWTHbQkTOU+YslznrTRFl6AAJxWT7BjGv7Br4Tht9rKPv9FnmJd6Zh6BAq5QZYuFj+5yiTxnTyyNCX28f1KfDkMmsveKTfBQLlnmGzNkmjzE0hrbzkDk7JMvOPUI/ccRn/TAmXJwjW1dt2f+ULfPMPwARhcdivDPA/sGb482kL8qUjVFbjGvHjUFcJrMKHwVrC84nvyUMv7kGzQH0tfnw78T4e0rO7VoZ8QBmMiuGPWvb22vbNGbLDGw4G8/GiihqVmAVQlCQWMDeuCGI6z3eJYTWa4udyczvmGM8DIIcx2JadO18Zv0Q8+nJTMyt3ccnrtcyn0HmZUFxN7kIZjmshczceabc2YwZYqUy8xhsH7GnfaUwpsdKZdY7Y8SvF2ZZrMVrhjHLwDKbMlhmUwbLbMpgmU0ZLLMpg2U2ZbDMpgyW2ZThcHtr8Q/IMMk+kNEbmgAAAABJRU5ErkJggg==" InformativeScreenshot="1d3302b1c543ce8f8da70b94957c4d54.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target DesignTimeRectangle="569, 534, 755, 50" FriendlyName="'Time assigne'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;div' idx='7' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelInner-sc-17towfw-1 dKDRgr' parentid='root' tag='DIV' aaname='' check:innerText='Time assigne from BRICARE*' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_17" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_20" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_5" InteractionMode="HardwareEvents" MovementUnits="10" Version="V1">
+                                                    <uix:NMouseScroll.SearchedElement>
+                                                      <uix:SearchedElement>
+                                                        <uix:SearchedElement.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="569, 744, 63, 17" ElementType="Text" FriendlyName="'Reporter'" FullSelectorArgument="&lt;webctrl aaname='Reporter' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Reporter' parentid='root' tag='SPAN' type='' class='' check:innerText='Reporter' /&gt;" Guid="8780b165-1ab0-40f0-aabd-62de63ec4b6e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAVCAYAAAAdHVOZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHGSURBVFhH7ZS9SwNBEMX9f20FQQUrFUSrENFArPyoYqNYiEUqLSwE05kiYCFYSAgWarXy5N7yMpnzDjYhKvtg8NzMx5vfbbIQsqIyDFGGIcowRBmGKMMQRRiX1zdhcXnHjbWtVhiO3orM/6taMBC7e6fh/eOzyJ6/4KV52AmDp+fiJFH9h0kY+KvCjcDNWFpvTG9womblqRIG3gBuBT677z0Wp5M3ST+DQRhF3dlFN+Z4t6t9fD7WR+dzacRJ5+r785WNg7C6uT9Wgx6az3M7j7PgCf7wHH2/vlTD4GL6FiwIBhuzxsuhQYVso2w5xHbjyIXh5SIUiAWvO0G1fzOsQW3E5TlYYXiAcIbAs9eHZ7qgd2O0lv7pE+Ly9MD/7Y2hasFgM0iXsgGDMMocO5RmMIvzdElIc7ylIe+cdV5whvb2VPo10aXRhJoHDPalUmHoy1X9+Juhi/PcM2KldRzMOp4h8Kx9WMezMhgADNBaS//64qySYEA89wbboBEu5eXwtnAhL4d9qmBovsLWUN/JMHQwF4EsEC4AEQbyb+96MUfrKRpk6PwyGJDOZ18LREFAtWFMUwrDLv+blWGIMgzRTGD8TYXwBal+ENJt5bYAAAAAAElFTkSuQmCC" InformativeScreenshot="caf528216fad428a4df5362f6d60e717.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                                        </uix:SearchedElement.Target>
+                                                        <uix:SearchedElement.Timeout>
+                                                          <InArgument x:TypeArguments="x:Double" />
+                                                        </uix:SearchedElement.Timeout>
+                                                      </uix:SearchedElement>
+                                                    </uix:NMouseScroll.SearchedElement>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </uix:NMouseScroll>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_21" Text="[CurrentRow.ByField(&quot;Reporter&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Reporter*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" InteractionMode="DebuggerApi" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="569, 594, 755, 50" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='22' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='Content-ve26fj-1 kmGRCO' parentid='root' tag='DIV' aaname='' /&gt;" Guid="5fbd7100-8a3e-42ca-b615-4166436f7563" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANDSURBVHhe7d2/ahRRGIdhewl6B+YSbLRUwV68ArGw9hLMFQgWaQV7EdKYRiRCtBBRCxsRjSKIzYIIZkGz2eN8k8y4weMm2Z2Nm8PzgwdC5s+2L4cNOZHMzMzMzKyIiXszMzMzs0Im7s3MzMzMCtmeuN9cX01fblxOG+cX0sa5kwAAwDyqej26Pfp9dG3cx4XsgwAAwNwaDfw27usT++pib3kp/ez306+tAQAAMIei16Pbo9+j45u1cd98FUfYAwDA/Itur0/vq45v9ifu40Il9yAAADB/moZvJu4BAOCYEvcAAFAIcQ8AAIUQ9wAAUAhxDwAAhRD3AABQCHEPAACFEPcAAFAIcQ8AAIUQ9wAAUAhxDwAAR2T7za00qOSudUHcAwDAERh8fpDS/Sq3K/Fz7p5piXsAADgCw4dn2rgfPlzM3jMtcQ8AADM2+HC3DftG/C537zTEPQAAzNjoqX1jFqf34h4AAGYo/oi2DvqV0yl9e53Sj49t4A/e3s4+MylxDwAAs9Lv7UR9xPyTS7ulXS1+3g3+uCf77ATEPQAAzEh7av+vuK/EPblnJyHuAQBgFkZP7cfEfZen9+IeAABmYPvVzT8BPy7uK12d3ot7AADo2Nb393vivTYm7kM8k3vXYYh7AADo2Pbza3/F+35xH8/k3nUY4h4AADqUPbUPo3H/6Gz2nmlP78U9AAB0aPvplWy4197dSenTvfy1yrSn9+IeAAA6svX1cTbaDyPekXv3QYh7AADoyHDtQjbYa5n/UJszXLuYffdBiHsAAOjAvqf28T37ZquL+Xt2TXp6L+4BAKADY0/tG8+upvTiev7aiElP78U9AABMaav3Mhvp04h35j5rHHEPAABTquN+5VQ20idSvUvcAwDA/9Lv1d+V70K8K/sZ+xD3AABQCHEPAACFEPcAAFAIcQ8AAIUQ9wAAUAhxDwAAhRD3AABQCHEPAACFEPcAAFAIcQ8AAIX4d9yfX6gv/Oz3sw8CAADzI7q9jvuq45u1cf/lxuX6Ym95SeADAMAci16Pbo9+j45v1sb95vrqTvkDAADHRnR8szbuY3GhPsHf/YoOAAAwh6pej24fDfvYnrg3MzMzM7PjupR+A2BLUwaeOdD6AAAAAElFTkSuQmCC" InformativeScreenshot="df1d40c2289bd6b1bdd537cce1c635bb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target DesignTimeRectangle="569, 544, 755, 50" ElementType="Text" FriendlyName="'Reporter*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='10' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' tag='LABEL' aaname='' check:innerText='Reporter*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANwSURBVHhe7ds7i1VnFIDh9CH/JU1S2dnkF1hbWMVWGPBCqhgQAwExRMFUagoxjcEiWAQCUbAIxE5BQYiQIgTxFqtPV+as45rtnpyBcdRZPA8sPO7z7Yvduz+OHwwAAKAFcQ8AAE2IewAAaELcAwBAE+IeAACaEPcAANCEuAcAgCbEPQAANCHuAQCgCXEPAABNiHsAAGhC3AMAQBPiHgAAmhD3AADQhLgHAIAmxD0AADQh7gEAoAlxDwAATYh7AABoQtwDAEAT4h4AAJoQ9wAA0IS4BwCAJsQ9AAA0Ie4BAKAJcQ8AAE2IewAAaELcAwBAE+IeAACaEPcAANCEuAcAgCbEPQAANLGM+6vXfhsH107OztGvzo5/Hj5arGzuxrUxju0f4+njxQEAANgdthT3MV9/+8N49u/zxep3L57l9PeXx737DxZHtunOH2Ps3zPG8YOv5pu1xZcAAPD+ey3u488qduxj5/7QF6feXEhv0449U+zWx679vo/Xd/ABAGAXWRn3sUMeu/bx3e+3bi+Ovr7TX7+L4I7wjvN+/OmX5Zq53f9zF65suE69f0Z8zMXLP//3/eEvz4wjx7/bcE5co67P49P75b3imeL54vPyuf/+a4zPP1vfrc/Pl86sfwcAALvAyrjPUK+75NOwz8lQznPm1mRw15eG6WwW6zEnTp2fjfu5tTE18KcvEvXfBAAAu92Wf3M/De4axhnzGdI17ueCP47FxOe56+SxGuxzO/r13Hz+fM6QMZ/PkH+f7ugDAEAHW4r7jONQI306EdwR3rlmGtEZ13GvvF+N9lDXzEV8mDue581N3qNeGwAAutn0Zzk14iOK07uI+7xu2m7c15cVAADo4n9/c19DPo/PhfVUPS9DOs/LYzHxuV4nz8tjm8V9vDDEi0M9N5+/vohMiXsAADpb+R9q8/hcSE8nwzojfW5N7uZnoM+tyeusivu6vr481KnPLe4BAOhsZdzXkM4wD9PAzyAPGfex/vrNW8s19fyUwZ1T779Z3Id6/7zuNPBr2AdxDwBAZ8u4f5Nq3E9jHgAA2BniHgAAmhD3AADQxI7EPQAA8PaJewAAaELcAwBAE+IeAACaEPcAANCEuAcAgCbEPQAANLEh7p/8enX8eWDvuPvpR+PuJx8aY4wxxhhj3sd52evR7dHvr4zxAg/WqfBl6M+xAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_18" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_22" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_23" Text="[CurrentRow.ByField(&quot;Sumber Laporan&quot;).ToString]" />
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Sumber Laporan*'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InteractionMode="DebuggerApi" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="571, 750, 710, 40" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='15' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class=' css-11tnip9' parentid='root' tag='DIV' aaname='' /&gt;" Guid="7b425ebd-18ee-4f5f-a61d-781eb7c91af6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAsoAAAAsCAYAAAB8FJ72AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEYSURBVHhe7daxEQFRAADRy41yaEAr2tCEAi8TyBjMhd+cRGA78IIXbQM7XY6HMe8243o+jcftPp6vBQAA/t4077efUTbJAADwNa2TvKoIAAD/yigDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwBAMMoAABCMMgAABKMMAADBKAMAQDDKAAAQjDIAAASjDAAAwSgDAEAwygAAEIwyAAAEowwAAMEoAwDAj2W8AQBSjtAFJt2NAAAAAElFTkSuQmCC" InformativeScreenshot="8b3889bdabd00856d4c0311629f9ef25.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                              <uix:Target DesignTimeRectangle="569, 695, 755, 50" ElementType="Text" FriendlyName="'Sumber Laporan*'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label' idx='11' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='Label__LabelWrapper-sc-17towfw-0 keOXhT' tag='LABEL' aaname='' check:innerText='Sumber Laporan*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvcAAAA2CAYAAABDVLaDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARoSURBVHhe7dwxayVVHMZhe/G72GhlZ+MnsN7Cym2FbRQ7bRQEUVDQTi1kbZQtZEFBERsRtFNYZUHFQkREdq1G/3fzxpOTM5OYJSGc+zxwSGbuzJkzs80vNzf7wAIAAExB3AMAwCTEPQAATELcAwDAJMQ9AABMQtwDAMAkxD0AAExC3AMAwCTEPQAATELcAwDAJMQ9AABMQtwDAMAkxD0AAExC3AMAwCTEPQAATELcAwDAJMQ9AABMQtwDAMAkxD0AAExC3AMAwCTEPQAATELcAwDAJMQ9AABMQtwDAMAkxD0AAExC3AMAwCTEPQAATELcAwDAJMQ9AABMQtwDAMAkxD0AAExC3AMAwCSOxf0Pt39ennn+1eXqtZd249kX31x+/+PPg1fPT12jrnVR17tx84vd/dXXvfP+G8vyyrWDDQAAZnEk7vuwv8jAF/cX4Muby/Lkw/fC/oWry/LclXuhDwDAFI7EfYL3rXc+3G0nuGvf199+t9t3XsT9Bfnt12V5+ollufLYsnz/zcFOAABmMIz7rcAeRXGFf/tDQbZffv295bW3r+++zzl37v6921/b9VuC+m1BaeP+k8+/OjynPSayhoz2B4+89u71j3dz1fftWiPHjV5r5V7akeutrbm2++d30sed6tnV/g8++vTwuLpO+7wyarv2l/Y+Mkd/zKGK+Yr6erc+39e7+QAATGHzYzmjQBxFcQK4j/vTjFwjoTw6pg3hXL8fCe7R63mtNbqP3kkfUzrtmteeR/uDSxvm7Wv9/oyse+151Ni6NwAA5nPsD2pHIZpoL6Mozjl93CdQ23efE/MJ51EoZ+72vNqXY9oozjyZN+tr43pkdB8n6a8/WnO/r72H9jkm2rMv27mPNVl3zst2e7/93AAA7IdjcR8JxIzEa2Iy22Ut7ttQzXw5LxGcKO23I9er8xPytd2PnNcev2V0H2uytlyrj/utNa8dk3vJ/v759DJnRu6vvVb0/x4AAOyH1biPROdWTPb7tuK+Xit99K5FcDv3/4n7+rrlNMflermPrPE84z7PJ/r97dztdnsf4h4AYD8dxn378ZE2MNdiMsHbnpdjEpdnifs6JqHazl37ckzieiTryxxrTnNc1pxjEuR93G+tefR8SubOvv75lP4HgNKfN7oPcQ8AsJ+OvHOfUByNRGfCcTQSkznmrHHfjzZu19a4FbsjW/eaeF87ZhT3/WjXvPbMMk/pn0/Zmn/rfnO9HAMAwH441R/UtsFZ2uit+Mx/A5mYzBxnift2vsyfSI4+utuIHcXuSD9HOxLd7bvuNeqcdv52zXVfdV69Nlpz3oXPXP0x/fOJPMuc8+PtXw6vWee364mcI+4BAPbLiZ+5Z10b933MAwDARRP390HcAwBwmYj7+yDuAQC4TMQ9AABMQtwDAMAkxD0AAExC3AMAwCTEPQAATELcAwDAJMQ9AABM4kjc//XZjeWnpx5fbj360HLrkQcNwzAMwzAMw7iM499er26vfv/PsvwDqy9mOXkfGG4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_19" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </uix:NKeyboardShortcuts>
+                                                    <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_24" Text="[String.Empty]" />
+                                                  </Sequence>
+                                                  <uix:NClick ClickType="Single" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="664, 879, 54, 20" ElementType="Text" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl aaname='Cancel' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cancel' parentid='root' tag='SPAN' type='' class='' check:innerText='Cancel' /&gt;" Guid="4ee74a85-6586-403c-b01c-d6d6ae1b9147" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAYCAYAAACr3+4VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAN6SURBVFhH7Vb7M1RxFO9vaxqTmZ4GqTzTyEiGWUI0hiQU5THCMEqMyCNlMJIYZUWlkOQ5ssWya1G7ljan+zn2u62d5e5Ov5jlM3PnO/d7zz3nfM7r+z1E+wQHRF0NB0RdDfub6ObmJn0enaakzFI67htLhz0ieE25U0az39Vmqb2LNeM6xacW0t2iavOOHaLrGxtUUFZPRzwjKSw2i5pfKqmnf4geVreQ54VEcj8bTcr+YbP03oQsUWSyrqmTSWLFuzV0y6ukSMonn5Ak+raHMytLVL24RP7hqVyyyKw9DAyNUYAko3y3ldXfJhM1tyspKCKNA4QyPxeaTE9buvkbsKRbpcArN6mmsYP3vS5eZzm/sBR6/XZwW0CNkpPlNS0WGax4x76A3mCkkornlraCHvgg7MkS7eoZ4B+xOgI4WFnbRm5eUZRdWM1Oo9RDFJlMurWjl+UEUW/JaQSkqa2HH+yd8Iul0YkZltMb1ighrdiiD35gxXtBWQOZTH9Is7RC4XHZ3EYIHGwKmfzSOiYrS/TJs1d0KiCexqdU5p3dsfpTT9FSKcMAnBAQlSEMCaLBkbdoYVHHe8DEtIpOB8ZzmwDdvZ/IzTuKOt/8C7QI5qXoTJpTa6mq/gX5ShlU/VgwS2wB/8B3BE2WKD7AMBz4HwhD6bmPOACCaNb9qm1lKvaFQ3kltZxxrW6F321hWDPS1eQCirh2j4OCISkeBOvY+RheZYlCyJmMCqBc5tQaNlha2WQpXRiDUVtCAtb76EGUrfjHHoQ82munB8GSJdr3YYQd3K1H5xe0FBpzmx43tEvZkgaR1JPWZy1IopSDo9KdIiqcc4SorR5byBJ1ZOqiFxAMTLkZ1TxPxYy8Su5XgV96A0Um5jhFFNipdN8PfuUjDRMfevHAxk6QJSoaH0TsnaMYABgoGAyYfn0DXziT4qgRGBqZ5GnqLFF7wwhtkVNcYwkAhtHRMwqettbA+0n/OOpSfpQnCmDEp+dWMAFxM4ISlCNKExkcn5plWVwaEGmM+sbWbpaDcsi5+yicJiqOF9y+isobWd+N7AdMHucvsKDRSe2RYTlOrH3Dv9DhEFEAmYSCyxJRGAVpj6AEVqjRLpultjA8OsUBQRVANk4yMDY5y46iDdAOjhIFbC8M9i4VuKEJcsI3XCBwkQAcJuqKOCDqajgg6log+guBeA2/ixeWEAAAAABJRU5ErkJggg==" InformativeScreenshot="353ce8cc4b24c6cb42e0101d484944d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ueab:ExcelForEachRowX.Body>
+                                          </ueab:ExcelForEachRowX>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelProcessScopeX.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:ExcelProcessScopeX>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="584,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416.8,822.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,729.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_5" Text="[data_CallType.ToString]" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Judul Laporan'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" DesignTimeRectangle="578, 712, 736, 23" ElementType="InputBox" FriendlyName="'INPUT summary'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='Input__InputElement-sc-1o6bj35-0 bfCuIo' aaname='Judul Laporan*' /&gt;" Guid="2c4771d4-3a9e-4b23-825c-eef4a74b93df" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAuQAAAAbCAYAAAA0/5qAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAChSURBVHhe7dYxEQAgDAAx/EuG3hUZv2SIh5z7ZgEAgIaQAwBASMgBACAk5AAAEBJyAAAICTkAAISEHAAAQkIOAAAhIQcAgJCQAwBASMgBACAk5AAAEBJyAAAICTkAAISEHAAAQkIOAAAhIQcAgJCQAwBASMgBACAk5AAAEBJyAAAICTkAAISEHAAAQkIOAAAhIQcAgJCQAwBASMgBACAz+wEsIWE+voVyKQAAAABJRU5ErkJggg==" InformativeScreenshot="4a1f1e40f8a0a0f6a92f0b1a9116bdda.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="569, 675, 101, 17" ElementType="Text" FriendlyName="'Judul Laporan'" FullSelectorArgument="&lt;webctrl aaname='Judul Laporan' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Judul Laporan' parentid='root' tag='SPAN' type='' class='' check:innerText='Judul Laporan' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAVCAYAAABFYsCAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHpSURBVGhD7VYxksIwDLz/3gP4ACXDD5KOB9BQUdJT0PADhuERujixLFnei32ZFPGNd0YF9nplaW2TL2rYPJpJFaCZVAGaSRVgxqQndbsDfe96urz90CKwzpnufiSP3JolmvWimVQBmkkV4A8mocagsQ9djm5siu5hOSU6iKORm/d4nAeO43HoA6c0Il6q+br2av5A++vHzziwTk/diXk+T2n+9432kDNhZZNig+JgTokO4mjk5gdEheuwOUAcb/QaOUT3E5h3cXp6BtIZcqyU32Fdk8LG1GkIp8lubkYHcjRy8wi8xtajb4aMdY/hJ6pHNX/kQB2EgvxJryasaxInCafMwa4r0IEcjdy8BnM55uqRmzM2DtZjOEFHGRkhl1+vw3vyJskzNZ0OByuCBMzYlkwqfm5ijdVMWpQf7yncpPD28oZCEisqRsofqueA5yHhlOj8sllBbl40w1MyU0/g2L2BetIxXhObVJ5f14DrkucuvIcmwikq+ShYi4M3K5BmonCNEeNt2OaCWPThgE1Kw+bXNeK64/8ka5S55nIapkg/rx1iEyAnq4M3K+B5HHx6dYO1cfEf/pAjqjvNaRsuN8+BdWKTHIrzj2wHXPfMh8N/B27IFtFMaiZtGc2khhXRTKoAzaTNg+gHHx6sEahkLG4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_9" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1" />
+                                  <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="SetToClipboard_6" Text="[String.Empty]" />
+                                </Sequence>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowStep x:Name="__ReferenceID1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">320,353.6</av:Point>
+                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">420,406.4 420,426.4</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[isLoginPageJiraExist]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                          <ui:UiElementExists.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b0989bf-30db-4b63-b9ba-46bd9b9c3248" InformativeScreenshot="c463f398f3be227e72948182949cb517" Selector="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div' parentid='root' tag='DIV' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:UiElementExists.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:UiElementExists>
+                        <FlowStep.Next>
+                          <FlowDecision x:Name="__ReferenceID4" Condition="[isLoginPageJiraExist]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">380.4,426.4</av:Point>
+                                <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+                                <av:PointCollection x:Key="TrueConnector">380.4,470 210,470 210,498</av:PointCollection>
+                                <av:PointCollection x:Key="FalseConnector">459.6,470 509.6,470</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID3">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">110,498</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,84</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">110,540 30,540 30,154.1 260,154.1</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch sap2010:Annotation.AnnotationText="Login Jira" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <TryCatch.Try>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,964.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'DIV'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" InteractionMode="DebuggerApi" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Text="sandi.konsultan@work.bri.co.id" Version="V1">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/user/login" DesignTimeRectangle="739, 425, 440, 50" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='login-form' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='login-form' tag='DIV' class='Content-ve26fj-1 hqyPWx' aaname='' /&gt;" Guid="0b8fae6b-cc89-4136-994a-3747f11b5722" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbwAAAA2CAYAAAC87CzVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOfSURBVHhe7dv/T1VlHMDx/u6+aCsnZhlpY6QCAaEJNRUSo6V9ITPatEYtytKZMhnhjSAGgrQ98TnrnF3oFKvuRpfn9dleA+45zxm/vXeee84TyRhjjMlgBM8YY0wWI3jGGGOymG3BW11bT3PzjXT33hwAtK1oWTSteargxYG6RQDQrpqjVwWvvLNrLC6njceb6fHmbwDQdqJh0bJoWrStnCp4ZQ3FDoB2Fy0ru1bOn4JXtxAA2o3gAZAFwQMgC4IHQBYED4AsCB4AWRA8ALIgeABkQfAAyILgAZAFwQMgC4IHQBYED4AstDR4Y+99mp48fOpv9b05Xru21ZZXVtOJnrcL8fv8w1/S4eNvFP9j3fkA7G8tD97TR3rSa4OjaWBkotaVyRu1a1tN8ABo1vLgPftiX/r2h3u1x/eS4AHkbc+CVwbowuXJdOn96+ng1rqnOk6nzpMj6e7sfJqde1jcncVncSzOWXu0Ua3/auZOeuXUW+mZrTvK2Co9cLQ39Zy5lH7aum4cd4cHQLM9D95zx/qLn5evTqXz45PF+iOvnkkdx4fSwPBE+uj6l1X4Pv5sulg7/c3tdHArcC91nyu2SOOc2EaNc7r7L6aV1UeCB8A2LQ/ezodUdpq6OVOcWwao48RQcTdXXmNk7MPivNGJa2njj8/uP1hIhzoHUv/wu8Xf5y5eTUe7zqYH841q3dr6RnGHF9eMawseAM1aHrzdHlq5dWe2OLcMUO/Z8Sps5TViC3Pm+x+rz5Z+XS22L3d7wjPWRhgjkIIHQLOWB++fbmnujFjdNcp4NZ8bkVxoLKUb07eKNXE8vs8r1woeAM3aMnhxlxhbobH1Gd/bHeocTCcHx1LX6xcED4BabRe8eCClq+98sfa72/e3bYfG93+CB0CdtgteuW7nd38LPy+lY93DggdArZYHb7eHVoZHP0iLSyv/6Q4vXj2Ircx4beHa518X7/I9//JAOvBCr+ABUKvlwWt+BaFORCfi82+DF3/Hy+Wnh94pHlKJ8MV1rnxyM019MVN8Fu/rCR4AzVoaPAD4vxI8ALIgeABkQfAAyILgAZAFwQMgC4IHQBYED4AsCB4AWRA8ALIgeABkQfAAyILgAZAFwQMgC4IHQBYED4As7Bq8jcebtQsBoF1Ey/4yeHPzjeJAY3FZ9ABoW9GwaFk0LdpWThW81bX1qoYAsB9E28qpghcTB8o7PQBoV9Gy5tjFbAueMcYYsz8npd8BoKDlcIZ/95wAAAAASUVORK5CYII=" InformativeScreenshot="40257696f998de49a6198cc4c415b2be.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/user/login" DesignTimeRectangle="754, 505, 410, 40" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl aaname='Next' parentid='login-button' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Next' parentid='login-button' tag='SPAN' type='' class='css-t5emrf' check:innerText='Next' /&gt;" Guid="12781990-3019-4189-b773-596d86ef7cbc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZ4AAAAsCAYAAABVCd7FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOnSURBVHhe7dzLi41xHMfx+Qf8B9YW/gJrJVnISlmwsWJjRSkLokSWLNyi5JKiJBauIVLu5BLlkmHMMcYMc+bMuX89n59+x+OZr1mo31k85/2tV875PM/5jd2n53d+M0PGMAzDMH0ciodhGIbp61A8DMMwTF9naGjjBwMAoG/cEACAVNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgFTcECix7VcmrdHu2vdax9ae/ube82K0aT/rHVtzasy9/r/m7xi2U4+rdu75tHsdGAhuCJRYLB7Nk88NW7D786x7UhWP1tO6V9/MuNeBgeCGQInli6fdMdt35+eseygeICE3BEosFs+zkaZNznRsfLpjq47/XTBe8Sw9VLH7ww1rZWWlmap37cLLmi3c8/uJ6fyLmnWzPsuXyqK9X+zdeMtmWl27+bbeKzyNXuv/Eu8FBoYbAiUWi0cFcfxh1TpZF6hQ5m352LunWDz6LuhbVlAqkBtvZ+zEo6q9rDRD0TwdaYTyWbx/1D5OtKzW7NrmixPhcyojra9/Vxz9ameeTYc1XmWfPXJvKmTxZwIDww2BEssXjwrjeVYyxS23YvHcele3aqNrmy58790jp59Mh7V2Xf8R3m+7PBmK5c1Yy7ZemgglpNfxqYitNiDjhkCJ5YtH79efHZ+15ZYvniUHR23kR9vGqh07mT3pHHvwh9bQ1lu+SC69roVMpaN1tX68RvEAGTcESqxYPFLccssXTyyLuUbfF8W1tOX2abId1lNRxVwoHiDjhkCJecVT3HLzikdZfp1/2XBuPGzLafLbbELxABk3BErMKx7Jb7kNZ08ssXiWH6lYZaod6HX+M0UqGZWNiuf2+3p46tH3QPE6xQNk3BAosX8Vj8QtN00sHuU6XKBc14v3N7O19NcI9F4lo/t0ii0epVYJ6SlI1ykeIOOGQInNVTxxy61YPOuyp6GJWiccn9b3OTpOrWPUOkSgp6Nlhyu9LTYdqdb3PPpc/Flxy23lsa/hiUpUWhynxkByQ6DE5ioeiQWSLx5ZfXIslE78BdJ6qxsOI+gXS2Nhad2d1/78UqgOKsQtNxWN3utpSPepxA7cnerdCwwMNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgFTcEACAVNwQAIBU3BAAgld9/4J1hGIZh+jFmvwCgVIjgNgqt7wAAAABJRU5ErkJggg==" InformativeScreenshot="198f0d1a5ebad6321c9f03414a7f741f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="739, 505, 440, 40" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='css-2vvlu7' aaname='Next' check:innerText='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbwAAAAsCAYAAAAeoQ0oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQZSURBVHhe7dxLaxRpGIZhce8/cO3CXyC4GxCZhbgSXIybWenGlQHBhYMDoricLGZGURAPCAoyOgsPIyqK4GlUTMSAB4wmaWNMNJ1On1/r+Ya3rHSqg9UgTH+5H7gw6a4u3d1UdbcrjDHGGFsGI3iMMcaWxQgeY4yxZbEFwbswXLH1g+O2cuC1rdgFAED/UcPUMjUtuzR4eiLvhQAA9Kts9NLgqYZ5BwMA0K/UNl8aPG5jAgBio7b50uDlHQgAQL/zETwAQNR8BA8AEDUfwQMARM1H8AAAUfMRPABA1HwEDwAQNR/BAwBEzUfwAABR8xE8oIB9V2as1mzbx0rLfj7zIfeYoYm6fa62bNvpydzne7X611E7/W/Zzj+dy30eQD4fwQMK8OBpj97VbM3Bd4uO+V7B0/l03qsj87nPA8jnI3hAAdngNVtmg7c/LzqG4AH/Lz6CBxTgwXsyVreZ+ZZNzbVs64mFYcsL3sbDJbs3WrNGEkltttq2i8MVW3vovyvEv4Yq1k46mo3Zut/G7eVUw+YbbbvxopqGVtPP+rf4sQC68xE8oAAPnsJ04kHZWkmDFLJVe96kx3QGT+/1fUjCqHBdfzFvJx+WbbhUD4F7PFYL0fvh9wl7M92wSr1tu/+eDq9TBHV+/bn52Hs7+2QunONZ8tqjd2fDY/53AujOR/CAArLBU6ieJnHrvLXZGbybL6tWrrVt4OLH9Bg582gunOvAtU/h918uz4SgjUw2bO+l6RA//exXgdzSBHrjI3hAAdng6fcd56YW3drMBm/DnxM29qlpk+WWnUqu7I7f/0rn0C3ObMAuPa+ExxQ7nVfn9+cIHtAbH8EDCugMnnTe2swGzyO11PR+oJ9LtzbfzjTD+RRIf1wIHtAbH8EDCsgLXuetzbzg6bHsebrZeX4q3P7UsrczheABvfERPKCAvOBJ9tbmaHKF5sHbdLRkpdlmoJ+zr+mkuClyCt6tV9Vwlaf3+fx5ggf0xkfwgAK6BU/81qbmwdPj+tCKHtfzncfXk3Ppf0/R74qbjtOnMv0rCYqfrvr0PMEDeuMjeEABSwXPb21q2eBtT67+piut8DUEvV+nryXo6wj6cIquBn88UkpvZeqrCXofT6/zv8tvbW45/j5cQYpiydcSgG/jI3hAAUsFTzxc2eDJT6cmQ+z8i+fVRjt8yEVfSPdQ6rz7//n6ZXJ9AMZvbSpw+l1XfzpO8fzjzmx6LIDufAQPABA1H8EDAETNR/AAAFHzETwAQNR8BA8AEDUfwQMARM1H8AAAUfMRPABA1HwEDwAQNR/BAwBEzZcGb+VA/oEAAPQrtc2XBm/94HjuwQAA9Cu1zZcG78JwJfdgAAD6ldrmS4On6QnVkNubAIB+pYapZdnYaQuCxxhjjMU5sy9KDWmmyJPhigAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'DIV'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_15" InteractionMode="DebuggerApi" IsPassword="True" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Text="Ahmadsandi13!" Version="V1">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/user/login?destination=portal%2F45%2Fgroup%2F128%2Fcreate%2F515" DesignTimeRectangle="739, 505, 440, 50" ElementType="InputBoxPassword" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='login-form' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='Content-ve26fj-1 hHbhyl' parentid='login-form' tag='DIV' aaname='' /&gt;" Guid="f34b7876-3522-480d-86d8-2fc9993bfd4f" ImageBase64="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" InformativeScreenshot="a83a802f3dd567143b658465a26ef36d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d095a6e1-06d2-4f16-8815-90a207731de7" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/user/login" DesignTimeRectangle="754, 585, 410, 40" ElementType="Text" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl aaname='Log in' parentid='login-button' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log in' parentid='login-button' tag='SPAN' type='' class='css-t5emrf' check:innerText='Log in' /&gt;" Guid="abca96b8-8222-43e5-bd47-046b07948f97" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZ4AAAAsCAYAAABVCd7FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANuSURBVHhe7d3LalNRFMbxvoCv4cC54FAEEQe+gODIiU5FnDgTEUQciAMvLaKiVsQqSB2IFXUgKm291BteW3qzsTa9JE1zX2btetokXakn0h3K7n/Bj9ovOznDj52zT20ThmEYhmnhUDwMwzBMS4fiYRiGYVo6bW2HhwQAgJYxQwAAfDFDAAB8MUMAAHwxQwAAfDFDAAB8MUMAAHwxQwAAfDFDAAB8MUMAAHwxQwAAfDFDAAB8MUMAAHwxQyAAO85PyOhM0dF/W2taYV/npMxlS/JhIm++Dmw4ZggEgOIB1ikzBAKwXooHQB0zBALQTPHsak/I86GsLBTK7j+q0p/6+/Zzy+/bdHRYrvSlZWah5NbM58tyrT8tHxP5Va9Rv+PpeJmSXLEs7S9S8vlXXoqVjytXLjs2W5RD95Ir3g8ExwyBAMQtnt0dCRmprNEC6B/NyfVXi2WiZaC5vq7rtHR0zWS6JHfezbu1WlBaIs0WT6ny2fre4emC3HyTdp9VqHz2xNzy9YBgmSEQgLjF0/0x44pAdy9Rprub2wPzLr9RKaK91yclmSnVFJGKyqjZ4tF5X/l9y6mxpXU9XxZciR17OLOUAUEyQyAAcYpn65lxGUwWJJEqyp5LtTuNqGy+ThZcKWkJ6e6kes3OixMyPrv6NRoVz+XeVM26KNef1TkQHDMEAhCneKI1Wi6bTy7vPqpfUw8+Z9xu5HjPyt2IFspq12hUPPUFQ/FgwzBDIABrWTyPvy1+DUbxAGvADIEAxCmeOF+1fUrk5cKLxQMB9V+1xbkGxQPUMUMgAHFKQf3rcIGeYGt0uOD001nJ/8epNqtgKB5sGGYIBCAqnky+7E6QvR3P1egbycnBrqnYx6k7X6ddFh2nfjaYdaWj5UTxAE0wQyAAUfE0muqjy9YDpHpfp/4BUt0VpbKLa/QB0ruVAtIHPykeoAlmCCCW6Di13gfSYrLWAKhjhgBqHOlOul3L/U+ZmvzEoxm3c9KHP6tzAKswQwA1tp39KT+mCu7P2uh9oKt9aXnyfcF9JTedKcmBrinzfQAMZghgBb0P1DuSk+zf+0BaQgPjedl/67e5HkADZggAgC9mCACAL2YIAIAvZggAgC9mCACAL2YIAIAvZggAgC9mCACAL2YIAIAvZggAgC/ub38wDMMwTEtG5A9wkLe0LQqNZAAAAABJRU5ErkJggg==" InformativeScreenshot="c4c90a9bccce23235cdd8b474e87d24e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Jira Service Management' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="739, 585, 440, 40" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='css-2vvlu7' aaname='Log in' check:innerText='Log in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAbwAAAAsCAYAAAAeoQ0oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPWSURBVHhe7dzLb0xhGMfxxt6/YWEvkdiIRMTCPyCxsmEramMnIhGxEBKXiiCKiJK4LEQFC0HUrai4S1ttR/VmptO5P+Z5x3M6U++MU20xb7+/5BOcOdNZyTdnZk5bhDHGGFsEI3iMMcYWxQgeY4yxRbGa4F3tScuqQ4OypPWztGwHAKD5aMO0Zdq06kXB0wd8TwQAoFlVRy8KntbQdzIAAM1K22aLgsfbmACA0GjbbFHwfCcCANDsbAQPABA0G8EDAATNRvAAAEGzETwAQNBsBA8AEDQbwQMABM1G8AAAQbMRPABA0GwED/BYc2RI+scLjv7dd87fsOncsHzPFOXVUM77OIDfsxE8wIPgAeGwETzA438JHoC5sxE8wGM2wVvXlpD7nzMylS+5/0v6p/579eHp5y3d2SunulIyPlV050zmSnLmcUp6ErmGrzHzCu/4w6RkCyVpe5CUN19zUij/uFL5Zb9MFGTbldFfng+A4AENxQ3e+uMJ6Sufo+F53J+V9ieViGmE9Lg+rudp7PSc4VRRLr2YdOdqGDVesw1esfyz9bm9Y3k5/yzlfla+/LOHvk+/HoBpNoIHeMQN3rWetAuQXq3ZMb2au9g96Y6fLQdwY/uwjKaLNQFUFsHZBk/3svzv5fu+ROd1vp1y8dx1czw6BqDCRvAAjzjBW3FgQD6N5iWRLMiGE7VXVha5d8N5F0ONn16NVZ+z9tiQDEw0fo16wTv5KFlznh3XP6uPAyB4QENxgmfnaNSW7Z2+2qp+TN14k3ZXX7s7f7360pA1eo16wZsZNoIH1GcjeIDHfAbv9vvK240ED/g3bAQP8IgTvDhvab5O5OTog8oXTWa+pRnnNQgeMHc2ggd4xImR+t2XVvQbmfW+tLL/7oTk/uBbmjqCB8RnI3iAhwUvnSu5b0Q+H8jW6OrLytaOkdi3JZx7mnLH7LaEe58yLnYaRYIHLCwbwQM8LHj1Vn0LgO/Gc/3cbuaN53oVmMxUztEbzy+Xw6c3jBM8YGHZCB7wj9htCfo5nwbRdw6AubMRPGCB7bg26q7Srr9O1xzfc2vcXSnqTePVxwHMLxvBAxbYyoOD8nEk7379l37Od7orJXc+TLm3PsfSRdnSMeJ9HoD5YSN4wF+gn/M96stK5ufnfBq/7oGcbL7wzXs+gPljI3gAgKDZCB4AIGg2ggcACJqN4AEAgmYjeACAoNkIHgAgaLYoeEta/ScCANCstG22KHirDg16TwYAoFlp22xR8K721P7aIwAAmp22zRYFT6cPaA15exMA0Ky0Ydqy6tjpaoLHGGOMhTmRH7dUmHqpylsNAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s:Exception">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                        </ActivityAction.Argument>
+                                      </ActivityAction>
+                                    </Catch>
+                                  </TryCatch.Catches>
+                                </TryCatch>
+                                <FlowStep.Next>
+                                  <x:Reference>__ReferenceID0</x:Reference>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowDecision.True>
+                            <FlowDecision.False>
+                              <FlowStep x:Name="__ReferenceID6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">509.6,435.6</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">609.6,435.6 609.6,380 520,380</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot; tidak menemukan form login&quot;]" />
+                                  <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
+                                </Sequence>
+                                <FlowStep.Next>
+                                  <x:Reference>__ReferenceID1</x:Reference>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowDecision.False>
+                          </FlowDecision>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowStep.Next>
+              </FlowStep>
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+            </Flowchart>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="003fa626af5c976a320da806556c17d1.png" Selector="&lt;html app='chrome.exe' title='CERIA Incident - Ceria Handling Complaint - Jira Service Management' /&gt;" Url="https://digitalcenter.atlassian.net/servicedesk/customer/portal/45/group/128/create/515" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

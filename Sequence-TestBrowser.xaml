@@ -1,0 +1,340 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_TestBrowser" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="692,660" sap2010:WorkflowViewState.IdRef="Sequence_TestBrowser_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_TestBrowser" sap:VirtualizedContainerService.HintSize="476.8,595.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="data_TicketID" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,224" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,145.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Firefox: BMC Remedy Mid Tier 9.1 - Login" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="945b7e44-2719-4fc7-821d-e64dadcffc62" Version="V1">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416.8,1464" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap2010:Annotation.AnnotationText="Login" DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1369.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="False" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="945b7e44-2719-4fc7-821d-e64dadcffc62" Text="00268700" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/shared/login.jsp?/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AConsole/Default+Administrator+View__c/*?cacheid=59fd9ee0" DesignTimeRectangle="746, 370, 270, 23" ElementType="InputBox" FriendlyName="'INPUT username-id'" FullSelectorArgument="&lt;webctrl parentid='controlBox' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='controlBox' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='loginfield' aaname='User Name' /&gt;" Guid="de27534f-b40e-48a8-943b-ee806830acc2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAbCAYAAACwTwBfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADUSURBVHhe7dy7CUJBFEVRW7BFMxOxBMHQwAYUE23CwkQRGbmCwcMPoyddCw4MU8AO72g0PTQzs2jPx3i2b5Plrq3XWzOzr1usto9eVDcGIanP+ebYztdbA/jmdLk+elHdGISkKiMiQK/qRXXjJSQAvxASICYkQExIgJiQADEhAWJCAsSEBIgJCRATEiAmJEBMSICYkAAxIQFiQgLEhASICQkQewlJ3WCs82kAPaoX1Y1BSNxsBXp9vNnqiryZ9e7jFXkzs7/39tPM7Je9/TQz696h3QG3OXV/3j5YAwAAAABJRU5ErkJggg==" InformativeScreenshot="fd01d8a14472643891ba7aa35513c1e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' title='BMC Remedy Mid Tier 9.1 - Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="647, 373, 75, 17" ElementType="Text" FriendlyName="'User Name'" FullSelectorArgument="&lt;webctrl parentid='controlBox' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='controlBox' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='User Name' check:innerText='User Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAVCAYAAAAHIbMXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG9SURBVFhH7ZUxbsMwDEVzrhwoRc+SJZfwFQJk8e49QwDPXjzmAqpUkRRFUTZjp2gLiMADpG9JJL/l5HD47FxjI6rYsKGKDRuq2LChig0bNDg/3OhijP0tLegmUJ/ucgbtx7m5ywxpffB6jv0T1Mmdsj2/AA3+sHncqP9vHmkp0h7ZOHvGclw7NEIzIZ0xztEsPKM0b3BXUFKwWimn13ped9hfv+GLfSA0sJpHc9a01+IebASLT40Fs7IcYMqqef0A47hONW9+uCPsLZ6znO4+ZGeXPcm6K31ArpfNO91hygpGqPDvIqNG64NWy1HAzfProIYwLs0TUA5oXM79mqIHVlf6InzU+gDtZfNS8SzgQEqgRShUFEk5CoR5NJ/8p6eYx85Nsd281T4wLxVsNC9oNQPVt8PZbJ7XqA4M+RlXzNpjXq0PJE3Sd71mHocX8qHdCs4e85gWI+YoGn2Deas/DQif0CZ2NWVxYZ4al00uvICwf5d5nuz2CfOwZvmyN5i32gfOaYBkBcbgB1BiFlmC4oZAvMO87Gy8FSKf/xfPzNpknnIuxqJ5DTuq2LChig0bqtiwoYoNG6rYMNC5L9Sj6kcWzPT6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
+                    <uix:NTypeInto ActivateBefore="False" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" IsPassword="True" ScopeIdentifier="945b7e44-2719-4fc7-821d-e64dadcffc62" Text="Pr4y0g076" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/shared/login.jsp?/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AConsole/Default+Administrator+View__c/*?cacheid=59fd9ee0" DesignTimeRectangle="746, 398, 270, 24" ElementType="InputBoxPassword" FriendlyName="'INPUT pwd-id'" FullSelectorArgument="&lt;webctrl parentid='controlBox' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='controlBox' tag='TABLE' /&gt;&lt;webctrl type='password' tag='INPUT' class='loginfield' aaname='Password' /&gt;" Guid="e5d90b60-5c18-44f8-8ed7-5e9092374ccd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAcCAYAAACtSjDnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADYSURBVHhe7d29CQJBFIVRW7BFMxOxBMHQwAYUE23CwkQRGXmCweIPozc9By4sU8AXvh2NpodmZhbt+TGe7dtkuWvr9dbM7OsWq+2jF9WNQUjqcb45tvP11gC+OV2uj15UNwYhqcqICNCrelHdeAkJwC+EBIgJCRATEiAmJEBMSICYkAAxIQFiQgLEhASICQkQExIgJiRATEiAmJAAMSEBYkICxIQEiL2EpI651h1GgB7Vi+rGICSOPwO9Ph5/9jsKM+vdx99RmJn9vbePZma/7O2jmVn3Du0OEoWxIpUAKDsAAAAASUVORK5CYII=" InformativeScreenshot="3fef73905ddea480e00797421106211d.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='BMC Remedy Mid Tier 9.1 - Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="647, 402, 58, 17" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl parentid='controlBox' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='controlBox' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Password' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAVCAYAAAAeql2xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGoSURBVFhH5VQxjoQwDORdPAjp3rINn+ALSDT021OsRL3NlvsBX+zEsZM4K7hr7oil0S5jx/bYga77mqBJmGQLMMkWYJItwCSvhukJAE8YNCcBC4wv589snlTwf8UR4fu6iJMOXED8aeEOw+bObHfobg/YaQxieiAUp4x9JV/WiTXCc7++AV4P6On5DrM/GkwLQN8bxhvHsM+6vaeEhwQkfAmNBNAUsSj/V4ndkGbMU+FTodykxKHf9+EF6Z5oKDE2F6zyqUGe3zgdqF11XxR96YYENT5pBG+Sa3LYwhBDH/W8uk/euPJbIo8ITy1LWrvumteNfuTltqAIFClifJP5K8AQvhRuDuuI8GTjGnRYb182zjFUNJjOU/Ky1bhpHAY2jHVC439CeNlEKZxhFs94zLev7p2PcVj/CSPGcB01BMmj+yyFm2d+IzwXw1tE4f3qGlbFeUg1np6pmbQe+Z3lt0rH+LoswhBeLMTr+vlVjwm80bbcLxUIIqLxgGo8Irz/yY2heFuImBZgCXfQ3xb0uwV8EN4YTLIFmGQLMMkWYJItwCQvjwm+AXJ29grdJqlpAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V1" />
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="945b7e44-2719-4fc7-821d-e64dadcffc62" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/shared/login.jsp?/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AConsole/Default+Administrator+View__c/*?cacheid=59fd9ee0" DesignTimeRectangle="746, 455, 61, 26" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl parentid='controlBox' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='controlBox' tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='' aaname='Log In' check:text='Log In' /&gt;" Guid="32250fad-c2c6-49b1-a3f9-9271e90e708b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAeCAYAAABzL3NnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGtSURBVFhH7ZkxboNAEEW5Cb6DzwBtzhEJu00TKV26yBWiMo4S+QapkVzlKnaRM0z24wGWZRZIrEXyQvEke5iF+Z/ZBS1B8Hik2WMG1k+ftHk90G6XK/YekZe6oM/U3DLh4eWdnt8+KP/6pvP5hy4Xf4Ae6II+6NR11ybAIST4Jt4E+qCz1RHVD7TKQTklDfQN6ITejgmYM753QQV0Qq9gwl4c4CvQu5iwmLCYUPIvE4pkpZJXlBTycacUWwqDQF1fI8rk3JHcnwlMGsGAmFLh2F9ZTFA4NCGjyGjbKB3KiSmCuHBLRSuvi2TCtS7EjPMOTBc3JlTzVr94GpcFNUZwoULObSYYca4lTE51nokTE2ytqsflnBMloYrf3Al6Lp+zpxscmCDcYaYZZyvMoQk955zUhGZK2HJmYEIzznsTbPNdj9sK88iEUU8H/q+v2ldhd2UCF2xSX4xbXqPznlA9EpkwyYY7oee1eVIT3MEFC+uJSywmTLCzhDtq3p2yM3qmmQOsO0uT7DFKbd1pZfdY9xiX3WZm9t8dKuAQWgVzBouHP4z8AjVbxOCsONIv7mXvj0nca5AAAAAASUVORK5CYII=" InformativeScreenshot="59f5dfc5ca6ead03e5e7ba783da779eb.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='BMC Remedy Mid Tier 9.1 - Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Login Berhasil&quot;]" />
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Firefox" IconBase64="AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAABvVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPbVM4v3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99v21TN/9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/7Snmf+OeWT/gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/7+zp/9fRyf+ypZb/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+omYj/0cnA//j29f/UzMT/pJOC/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/97Y0v9+Z0//gWtT/4VvWP+Pe2f/t6qc/+rm4v/x7+z/xLmu/6WWhf+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/e2NL/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+ypJX/5N/a//j39v/Z0sv/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+Ba1P/lIFs/8vCuP/x7uv/497Z/7uvov+cinf/mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/+bi3f+uoJH/5+Pf//Dt6v/Dua7/moh0/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/zsa9/6CQff+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TOL9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPfb9vVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//gAH//w==" InformativeScreenshot="2bf73ba079f10146f0d9c9d85922b9ad.png" Selector="&lt;html app='firefox.exe' title='BMC Remedy Mid Tier 9.1 - Login' /&gt;" Url="http://web.bricare.bri.co.id:8080/arsys/shared/login.jsp?/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AConsole/Default+Administrator+View__c/*?cacheid=59fd9ee0" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Firefox: BRICare:Case:Console (Search)" sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" ScopeGuid="c29b9eb7-107f-453f-9677-df3bc57eaae2" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c29b9eb7-107f-453f-9677-df3bc57eaae2" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AConsole/Default+Administrator+View__c/?cacheid=4e679365" DesignTimeRectangle="161, 819, 30, 30" ElementType="Icon" FriendlyName="'IMG reg_img_536870998'" FullSelectorArgument="&lt;webctrl id='reg_img_536870998' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='reg_img_536870998' tag='IMG' type='' class='btnimg' aaname='   ' /&gt;" Guid="46a54f16-2c39-4688-aba6-20ab72ea8708" ImageBase64="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" InformativeScreenshot="3c573762e583c39acdb9f1773a0cc265.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='ARRoot1657879978230' title='BRICare:Case:Console (Search)' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="147, 805, 59, 59" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl parentid='WIN_0_536870998' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='WIN_0_536870998' tag='DIV' type='' class='btnimgdiv' aaname='  ' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Firefox" IconBase64="AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAABvVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPbVM4v3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99v21TN/9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/7Snmf+OeWT/gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/7+zp/9fRyf+ypZb/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+omYj/0cnA//j29f/UzMT/pJOC/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/97Y0v9+Z0//gWtT/4VvWP+Pe2f/t6qc/+rm4v/x7+z/xLmu/6WWhf+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/e2NL/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+ypJX/5N/a//j39v/Z0sv/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+Ba1P/lIFs/8vCuP/x7uv/497Z/7uvov+cinf/mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/+bi3f+uoJH/5+Pf//Dt6v/Dua7/moh0/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/zsa9/6CQff+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TOL9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPfb9vVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//gAH//w==" InformativeScreenshot="f13c3cc04f5386698b24c3c574d2c681.png" Selector="&lt;html app='firefox.exe' htmlwindowname='ARRoot1657879978230' title='BRICare:Case:Console (Search)' /&gt;" Url="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AConsole/Default+Administrator+View__c/*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Firefox: BRICare:Case:GroupInbox (Search)" sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" ScopeGuid="3df1bf41-d406-41df-a83f-c29dd987b5cd" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416.8,968.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap2010:Annotation.AnnotationText="Cek List New Ticket" sap:VirtualizedContainerService.HintSize="375.2,678.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'A javascript'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3df1bf41-d406-41df-a83f-c29dd987b5cd" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AGroupInbox/Default+Administrator+View__c/?cacheid=1cb11234" DesignTimeRectangle="1285, 391, 30, 30" FriendlyName="'A javascript'" FullSelectorArgument="&lt;webctrl parentid='WIN_0_536870921' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='WIN_0_536870921' tag='A' type='' class='btn btn3d selectionbtn' aaname='  ' /&gt;" Guid="e90f703f-043f-4e4e-9196-16d6f4f1519f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFoSURBVFhH7de/boJQFMdx34/EwUmewKFrY+grMLAwUoY+hIlJo1OXhjgQRSAKQSWKATH+2U97G21Cen/KdNqhJ/mE4XKTL3eA0KA/Mo2HxycSXt/e2ZnPL5eMz5DL9WvhfD6zEgdwnUrI6XRiBUOOxyMrGHI4HFjBkP1+zwqGlGXJCobsdjtWMKQoClYwJM9zVjBku91Co9GIBoPBTUmSSPciMCTLMsgwDGq1WqQoyg/NZpPa7TY5jiPdi8CQzWYDzedzsixLGtLpdMjzPFqtVtK9CAxZr9c3ua5Ltm1XIrrdLg2HQ+n998CQNE3vGo/HZJomqapKmqZRr9eT3lcHDBFHW8disSBd16nf70vX64Ihy+WSFQwRT8oJhoj3ACcYEscxKxgSRRErGCJeWpxgyGw2YwVDwjBkBUOCIGAFQ3zfZwVDptMpKxgymUxYwRDxZeVUCREBgvghFgvcrvN9Ir89/yHVIfoAjuNI8DnHGpAAAAAASUVORK5CYII=" InformativeScreenshot="44266ba6bbc1fcc262e2ab49dc6a6c3f.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='1657880062829' title='BRICare:Case:GroupInbox (Search)' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="1134, 391, 151, 30" ElementType="InputBox" FriendlyName="'INPUT arid_WIN_0_536870…'" FullSelectorArgument="&lt;webctrl id='arid_WIN_0_536870921' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='arid_WIN_0_536870921' tag='INPUT' type='text' class='text ' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAAiCAYAAABIpKsxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEeSURBVHhe7dS7ToQAFEVR/9fWxu+wtfE7bG2sITCEgQwD4RFeAabHnCnG2Huo9kpOc+ud+7QDB3nE9vzyyphln1/f9/2JDXBQaLfbjdjgp9i2bSM2+Cm2dV2JDX6KbVkWYoOfYpvnmdjgp9imaSI2+Cm2cRyJDX6KbRgGYoOfYuv7ntjgp9i6riM2+Cm2tm2JDX6KrWkaYoOfYqvrmtjgp9iqqiI2+Cm2siyJDX6K7Xq9Ehv8FFtRFMQGP8V2uVyIDX6KLc9zYoOfYsuyjNjgp9jO5zOxwU+xpWlKbPBTbEmSEBv8FNvpdCI2+Cm2OI6JDX6KLYoiYoOfYgvDkNjgp9iCIPiN7e39435k7L+ntvTMHrEBbsSGwxAbDrLvP82jV8lq2xCdAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'New'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3df1bf41-d406-41df-a83f-c29dd987b5cd" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AGroupInbox/Default+Administrator+View__c/?cacheid=1cb11234" DesignTimeRectangle="1135, 422, 156, 20" ElementType="Text" FriendlyName="'New'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;table' idx='5' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='MenuEntryNameHover' aaname='New' check:innerText='New' /&gt;" Guid="c2aa6e10-f297-4d8a-bb75-41c9b4add71a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAAYCAYAAAB9VvY1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFbSURBVGhD7dfBbcMwDIVhraWFeC+KzqFtvIyHYUnRlig7TZSiBQ96H2AgcSSdftBOYvHx+YULV8jVAgSIgAAhFAKEUAgQQiFACIUAIdSTADemlDglkk/OXjhf7wH80kSAiXPZj3sCAcIfehkglUtwtwB7qD3WnUsew91Ifqe+ay+ZUy6yElb2OkBpRuNpMQ0B9jVm3NODsyD943w4E5Y1FeAQnf+80W2KtfD0N79H7m2U2ZqzIFufsKy5APXbObFcgPUxKmtul26q647gJEbdq+tt6unZfRrCuqYDbOFdA/zxPa5PuTb5dK+ufzA5YU3zAYo6BUmm2Tm9/GP2AZuahanFplESFw3XHwzLeitAm4L6mD2jszVDTLKG6rgTNdDxz0Z9R7yeC8t6L0BhAfmpd0TYrvOPhjiCHc6oUbo1sLQnAQL8PwQIoRAghEKAEAoBQigECKEQIARi/gaIh5xvkX50nQAAAABJRU5ErkJggg==" InformativeScreenshot="2e0ac8e8e9b0af3fb432960522b62c72.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='1657880062829' title='BRICare:Case:GroupInbox (Search)' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Cari'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3df1bf41-d406-41df-a83f-c29dd987b5cd" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AGroupInbox/Default+Administrator+View__c/?cacheid=1cb11234" DesignTimeRectangle="565, 652, 91, 16" ElementType="Text" FriendlyName="'Cari'" FullSelectorArgument="&lt;webctrl aaname='Cari' parentid='WIN_0_536870941' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cari' parentid='WIN_0_536870941' tag='DIV' type='' class='f9' check:innerText='Cari' /&gt;" Guid="880b83c3-3ca8-4d45-815e-a5b8a37cee67" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAUCAYAAADr0+FaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAH7SURBVFhH7ZRRbtpAEIY5U6CXgcAF+tqXvkBCyEEMkZWcoU8hbUiVCwACIUAgTLCxTZMQQPrrXXuNrcxDpFS7VrWWPomZf3aEvrWcQ/D8+Pkbm81GI4Gv374z5fyJ5Xuep5EAKd91XY0ESPnr9VojAVK+bdvZ4WaHXPDPjuxwQ819GA+XX/7Fns9Dyl+tVpngsXHgwivXoueiwcUd0HhMz34csWOHazKXByl/uVxmAB8V9qZXfCL7PyDlW5alHvONv/Vlk8iSPDyjwC4p5oCLB5H7KLNe4RDNvMG0HFwUxO/EHgWQ8heLhXI69fCTUzbpPMQL5Za9dF14RidZBxdS74gzNupc/hZmvEcNpPz5fK6c+/M9l396RedpVjjPM6GCLa5438Upq/N/cP9uVsyog5Q/m83U09qG8ltEFrMO5Qbkz54S9RatZB7I/xWfecJZJD+cUQcpfzqdZgAHJSau5BBZRPOViy81RS86k9/gjqwZFmpc/iuacU8NpPzJZJIJ2rXw01M0RE+I26PWDmojlJ8rOql5Jtbg8w6KXL6PdrTzuEPMqIOUPx6Ps4PxEgkVvMBI5EYxnVWr7AL2qN6y3A7ln/i4jc8sUD15v0cFpPzRaKSRACl/OBxqJEDKHwwGGgmQ8vv9vkYCpPxer6eRACm/2+1qJHCUD/wFy4C4xZH30fUAAAAASUVORK5CYII=" InformativeScreenshot="e00ad34afea849d00502adae5de7fc72.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='1657880062829' title='BRICare:Case:GroupInbox (Search)' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="717, 652, 91, 16" ElementType="Text" FriendlyName="'Hapus'" FullSelectorArgument="&lt;webctrl aaname='Hapus' parentid='WIN_0_536870943' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Hapus' parentid='WIN_0_536870943' tag='DIV' type='' class='f9' check:innerText='Hapus' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAUCAYAAADr0+FaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJSSURBVFhH7ZRfbtpAEIe5UmN6l9bg5AB97UtfTELagxgQbc9QtWrSNtAbAAIhQCAM/o9DkgZp6rV3za47j/UKkJE+KTPzm7H5kFKC6PPl52/YbDYFEnjz9h1RHn9S+b7vF0gAle95XoEEUPmu6xZIAJVv27YkQriInlq6CLmeDx9eRr3SH/gsZE8PVL5lWZII4ZzIPw+5ngfvqfxPQvb0QOWvVitJBFR+wPVcuC4T+U/wUcieHqh80zQlEYBG5GsB13NS+W3W695DmeRSdnDdZXl6o/wEWryXoLWz83voovdZTUlz+YPKXy6XkvATMSiP0OYzmi/uRJI6mRtam9Q21GOZO6h3sDybJ/c79V26y//977v+f1D5i8VCEh5UiZiqx/UsuFISOS0hy/oMNqc3lBDuWLb1GGeqLWwu3r+7ek7uCe8gB1T+fD6XhEvlu1xvDZdUTpPPRCiXa67OzCO5v9iNZiJfyKfz7H1W76k26Z2cQeXPZjNJOFAhX7jicD0TarGMB2iQuvEQC6k0MjvKBn6gdXYnO8/c56F74vvkByp/Op1KwgGVfFnV4Xp7OQapDSqEZm5r9N8Em7MbEaqB7Gfr2wAUbt9QuV06U2pm/Ky8QeVPJhNJ2FS+zfWWoJ8RIVswaI8JStiCrpMf4Bn0G+7GWQB6mmMzirGl/Qg1ygn32fMo0Z0btpczqPzxeHxEWPA6lubDd3R+uKDyR6PREbGGV0T+Cw++ofPDBZU/HA6PiFUq/ys6P1xQ+YPBoEACqPx+v18gAVR+r9crkMBePsBfYBBRFYd/qfIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <uix:NClick ClickType="Double" DisplayName="Click 'TTB000040753616'" sap:VirtualizedContainerService.HintSize="375.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3df1bf41-d406-41df-a83f-c29dd987b5cd" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AGroupInbox/Default+Administrator+View__c/?cacheid=1cb11234" DesignTimeRectangle="35, 778, 117, 18" ElementType="Text" FriendlyName="'TTB000040753616'" FullSelectorArgument="&lt;webctrl id='T536870944' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='T536870944' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' aaname='TTB000040753616' check:innerText='TTB000040753616' /&gt;" Guid="cc389f09-71ed-4028-b03e-7e8b0482139e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAWCAYAAADkWDPGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAINSURBVGhD7ZY9SsZAEIa/Y3gHC2/hBWwFz2BtY2XnAWwFRUFELLWy0btI7hB9hDcMw2wyCBsxux88ZHdm3tmf2f2S3fj9e3x5G2/vHzobZSryxfvQ2Si9yA3Qi9wAvcgNUCzy6evHuDvf/YqT57vQDuS14+xd7k8+a6/lA63N2yPd8dP1ZLMc3pz9+P0+kaOknVu78lky84x0ntRNLg1W8pXitWj1D66OfvDtWj4b4+eX0YFfA/0oVnvAU3F+7ToQPlZgsxrI6DyrFhnspGzba2r4gM3WTbD2JZ3ATg712fTMbQI7hm17yIef3H4ec7oSq99knfooRguo4VOfAvu4jA7YfN0ioXzWFmG10XgWHaLMPDNULXKETn2ko4+9ho82Y4OPW9IJimRvMRCHnWekUW7r078Jc5HP57Va9bM6z6o3WXaeUUxNH+3STVrSlWJks3E+RlAM+dTWgVff5gE/Zlbn+ZN3MpOLYuhjr+HjNcG42HzcnE59Nlavmjm8LvIxDx04QV/zE35eWZ2nmQ8vnhHaINqlnJD9wLJ5Sr4of6bIWZ1n1SKzSfYksnG6HbZdyyei+S3pos2kb/OQV+ub8wH5/d+ufKI0zyWdZ/UPLxsHa/ugtJ45HTZ03s6Gl3RzPqDo8vkDBKV5Luk8qSJ3/je9yA3Qi9wAvcgN0IvcAFORh8+hs1F6kTfPMH4BDCeYxQk41s0AAAAASUVORK5CYII=" InformativeScreenshot="ef9e1897f5112092346a573981d76133.png" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='1657880062829' title='BRICare:Case:GroupInbox (Search)' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="35, 758, 129, 20" ElementType="Text" FriendlyName="'No. Tiket'" FullSelectorArgument="&lt;webctrl aaname='No. Tiket' parentid='WIN_0_536870944' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='No. Tiket' parentid='WIN_0_536870944' tag='DIV' type='' class='BaseTableHeader' check:innerText='No. Tiket' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIUAAAAYCAYAAADUIj6hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALGSURBVGhD7ZZfS1RRFMX7AhEEQSEEERFEoNUHiYioh+g7RASRWQRSEBFEUERlFiUFYtCDoWVmDmJYkxIRps7cmZDCPzOTRWUvN9ce92bPnS1dyrezF/zwrL33OffcuevBNfGSunoHHEeQUOy5mXMCpeNhZ42XUOy+MeUECkKhvYRi1/VJJ1AQCu0lFE3XPpqwdK1Y+V1X+1cyhe90liX0MJN8HoQae+f/QCi0l1A0Xh03Yd0bK0mNP5KeWw1wLrDq+nmQNZeGI13FeHApbFYvVBAK7SUUO6+8N9HiWqGyWONXC5wLrJ4GSjOX5HBnnvYORt/MfqggFNpLKHZcfmcCvYwW4kJ5MT7TN001rCE9xzWW7qUFZwCrrs+EeA53g/hu3Gfp8/gcFtdDB6HQXkKx/dKoCTSQX4hbnn6Ko/IvquEvpGcg9sl+WrCPn5Gs6/Mg1A49mKD1nexsXc/yPI/34b4zSqHQXkKx7WLWhH7E3Fda48c91VuUj4QaPNT+Zkb2WLU04Fxg1SH2EM/y3YD1XKyhgx3jBKT3OFkKhfYSiq0XRkygF7kKrW+//kLrqFT9SFyDmnsi2YM1hB7X0oBzgVWH2CfFdb6LJdzpwP0PtOb3caogFNpLKLacHzaB+qfKNZ4Ff/JJjtZtI59lxqqlISr9JKw6xJ6VfM7fnrv/bvWfVP0+zjCFQnsJxebWjAn9iJMl8bdeTVMN0jMQ+/zyR1zJrwTmgFXX+yGew92gfe1jdT1g7dXv42QoFNpLKBrO2kDPJ+bF7217SzVIz+XnfyxXq7J6umaBOWDV9X6I5/g++o5JcR1gjoW9uhcqCIX2EopNp/udQEEotJdQbGx+5gQKQqG9hGLDiR4nUBAK7SUU6493O4GCUGgvoVh37LETKAiF9hKKtUcfOYGCUGgvoUDDcYCE4tzQnOMQHgqnDg+Fk2Au/gP0A7vjmaCL0wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Firefox" IconBase64="AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAABvVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPbVM4v3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99v21TN/9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/7Snmf+OeWT/gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/7+zp/9fRyf+ypZb/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+omYj/0cnA//j29f/UzMT/pJOC/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/97Y0v9+Z0//gWtT/4VvWP+Pe2f/t6qc/+rm4v/x7+z/xLmu/6WWhf+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/e2NL/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+ypJX/5N/a//j39v/Z0sv/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+Ba1P/lIFs/8vCuP/x7uv/497Z/7uvov+cinf/mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/+bi3f+uoJH/5+Pf//Dt6v/Dua7/moh0/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/zsa9/6CQff+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TOL9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPfb9vVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//gAH//w==" InformativeScreenshot="bff258c22494a74c594f5c24513b8132.png" Selector="&lt;html app='firefox.exe' htmlwindowname='1657880062829' title='BRICare:Case:GroupInbox (Search)' /&gt;" Url="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3AGroupInbox/Default+Administrator+View__c/*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Firefox: BRICare:Case:Trouble (Modify)" sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" ScopeGuid="e10719c5-045a-470d-9393-008defdc9b54" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,647.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Ticket ID'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="e10719c5-045a-470d-9393-008defdc9b54" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3ATrouble/Default+Administrator+View__c/?cacheid=e5d37182" DesignTimeRectangle="173, 258, 194, 26" ElementType="InputBox" FriendlyName="'TTB000040753616'" FullSelectorArgument="&lt;webctrl id='arid_WIN_0_536870914' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='arid_WIN_0_536870914' tag='TEXTAREA' type='' class='text sr  dat' aaname='' /&gt;" Guid="d4ee91b7-bc26-434a-b55f-3737531eab09" InformativeScreenshot="d2f134a03e529c696fb32e0e09dce8c6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='firefox.exe' htmlwindowname='1657880590020' title='BRICare:Case:Trouble (Modify)' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="24, 263, 143, 21" ElementType="Text" FriendlyName="'Ticket ID'" FullSelectorArgument="&lt;webctrl id='label536870914' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='label536870914' tag='LABEL' type='' class='label f6' aaname='Ticket ID' check:innerText='Ticket ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJMAAAAZCAYAAAA1zhyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF4SURBVGhD7ZjhjcMgDEZZi4WyDtvk122SYXxgSDE4pA3yFen0PSlSgx2C5Cc7qiMAjIBMwAzIBMyATMCMl0zeOXKXl6fwE2J8o73kjjkoeEfb+8RnHOL9/Fuf04eDU8E6dGeShXvMpEzv3qlk6nN32iDUcv6JTJF9ix1q9tzAgs9k6tf4vo6YKk8nExdYdozcQfJz535yLY7Uq+byiUy8z+B58BUmZMrFfwnTxIRMLJIsbivaETw5H+Iq3wwEKcj4MHeyKwIznsuUJDklUJSChpTfdQm1r+gkQ0EKMj7MhUyreSxT01EUuaApvqc8WVne4xxn3VgbClKQ8WEuxtxq/qYz5cS2uHfC3MUSMj7KxQf4coy+mU5pulHTiNfFlCA3XUXl9tLkM+GvgbVMyBTh+zqu6jTrv1vK2Kt2cdGbEceUvGYvgZLp3KNel8+Br6JlAmASyATMgEzADMgEzIBMwAzIBMyATMAMyATMgEzADMgEzIBMwAiiXy87qPC6JqhhAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[data_TicketID]</OutArgument>
+              </uix:NGetText.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetText>
+            <uix:NClick ClickType="Single" DisplayName="Click 'BRICare:Case:GroupInbox…'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e10719c5-045a-470d-9393-008defdc9b54" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="290, 9, 282, 55" ElementType="Button" FriendlyName="'BRICare:Case:GroupInbox…'" FullSelectorArgument="&lt;uia automationid='TabsToolbar' name='Tab peramban' role='tool bar' /&gt;&lt;uia automationid='tabbrowser-tabs' role='tab' /&gt;&lt;uia name='BRICare:Case:GroupInbox (Search)' role='tab item' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TabsToolbar' name='Tab peramban' role='tool bar' /&gt;&lt;uia automationid='tabbrowser-tabs' role='tab' /&gt;&lt;uia name='BRICare:Case:GroupInbox (Search)' role='tab item' automationid='' check:fulltext='BRICare:Case:GroupInbox (Search)' /&gt;" Guid="0a75a2ee-7a84-4d72-8624-ef37b54005ab" ImageBase64="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" InformativeScreenshot="00c5b44d0a9b50282270887a8b6cd39d.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='BRICare:Case:Trouble (Modify) - Mozilla Firefox' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="BottomRight" X="-19" Y="-22" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'BRICare:Case:Trouble (M…'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e10719c5-045a-470d-9393-008defdc9b54" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="572, 9, 281, 55" ElementType="Button" FriendlyName="'BRICare:Case:Trouble (M…'" FullSelectorArgument="&lt;uia automationid='TabsToolbar' name='Tab peramban' role='tool bar' /&gt;&lt;uia automationid='tabbrowser-tabs' role='tab' /&gt;&lt;uia name='BRICare:Case:Trouble (Modify)' role='tab item' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TabsToolbar' name='Tab peramban' role='tool bar' /&gt;&lt;uia automationid='tabbrowser-tabs' role='tab' /&gt;&lt;uia name='BRICare:Case:Trouble (Modify)' role='tab item' automationid='' check:fulltext='BRICare:Case:Trouble (Modify)' /&gt;" Guid="a53e6880-a4a5-4a5f-912c-d8ee61dba5e6" ImageBase64="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" InformativeScreenshot="8633ac5c200e21da0f18abe2042211ee.png" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='BRICare:Case:Trouble (Modify) - Mozilla Firefox' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopRight" X="-20" Y="22" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Firefox" IconBase64="AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAABvVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPbVM4v3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99v21TN/9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/7Snmf+OeWT/gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/7+zp/9fRyf+ypZb/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+omYj/0cnA//j29f/UzMT/pJOC/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/97Y0v9+Z0//gWtT/4VvWP+Pe2f/t6qc/+rm4v/x7+z/xLmu/6WWhf+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/e2NL/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+ypJX/5N/a//j39v/Z0sv/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/3tjS/35nT/+Ba1P/lIFs/8vCuP/x7uv/497Z/7uvov+cinf/mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/+bi3f+uoJH/5+Pf//Dt6v/Dua7/moh0/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TN/9wVzz/dFtB/3dfRf/39fT/zsa9/6CQff+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPff9tUzf/cFc8/3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52Lef+gj33/bVM3/3BXPP90W0H/d19F/3tjSv9+Z0//gWtT/4VvWP+Ic13/jHdh/497Zv+Sf2v/loNv/5mHdP+di3n/oI99/21TOL9wVzz/dFtB/3dfRf97Y0r/fmdP/4FrU/+Fb1j/iHNd/4x3Yf+Pe2b/kn9r/5aDb/+Zh3T/nYt5/6CPfb9vVToPcFc8v3RbQf93X0X/e2NK/35nT/+Ba1P/hW9Y/4hzXf+Md2H/j3tm/5J/a/+Wg2//mYd0/52LeL+fjnwPgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//gAH//w==" InformativeScreenshot="b601b4829ff173003100ce2896af90b2.png" Selector="&lt;html app='firefox.exe' htmlwindowname='1657880590020' title='BRICare:Case:Trouble (Modify)' /&gt;" Url="http://web.bricare.bri.co.id:8080/arsys/forms/lbappbc.bricare.bri.co.id/BRICare%3ACase%3ATrouble/Default+Administrator+View__c/*" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
